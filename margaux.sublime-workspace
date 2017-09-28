@@ -1,0 +1,1389 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"a",
+				"accroche"
+			],
+			[
+				"gut",
+				"gutterMedium"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"logo",
+				"logo-color"
+			],
+			[
+				"bacc",
+				"background-color"
+			],
+			[
+				"acc",
+				"accroche"
+			],
+			[
+				"marn",
+				"margin-bottom"
+			],
+			[
+				"flex",
+				"flexbox"
+			],
+			[
+				"hea",
+				"headroom"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"bak",
+				"background-image"
+			],
+			[
+				"BACK",
+				"background-position"
+			],
+			[
+				"contai",
+				"container"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"quic",
+				"quick-menu"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"acco",
+				"accomodation"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"cur",
+				"current"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ipo",
+				"important"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"gutter",
+				"gutterLarge"
+			],
+			[
+				"li",
+				"lightGrey"
+			],
+			[
+				"textr",
+				"text-transform"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"lig",
+				"lighterGrey"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"nth",
+				"nth-child"
+			],
+			[
+				"clear",
+				"clearTimeout〔function〕"
+			],
+			[
+				"data",
+				"data-lat"
+			],
+			[
+				"get_templ",
+				"get_template_part"
+			],
+			[
+				"transpa",
+				"transparent"
+			],
+			[
+				"head",
+				"headroom"
+			],
+			[
+				"imor",
+				"important"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"light",
+				"lightGrey"
+			],
+			[
+				"acf",
+				"acfPoints"
+			],
+			[
+				"rbg",
+				"rgba\trgba()"
+			],
+			[
+				"prin",
+				"printf〔function〕"
+			],
+			[
+				"cate",
+				"$categorie_actu〔variable〕"
+			],
+			[
+				"r",
+				"rgba\trgba()"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"to",
+				"toggleClass"
+			],
+			[
+				"html",
+				"html5blank"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"get_template",
+				"get_template_directory_uri"
+			],
+			[
+				"te",
+				"text-color-light"
+			],
+			[
+				"off",
+				"offset"
+			],
+			[
+				"is",
+				"isotopeArgNew"
+			],
+			[
+				"iso",
+				"isotope"
+			],
+			[
+				"isot",
+				"isotopeArgDefault"
+			],
+			[
+				"isop",
+				"isotopeArgDefault"
+			],
+			[
+				"remo",
+				"removeClass〔function〕"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"share",
+				"sharebutton"
+			],
+			[
+				"image",
+				"imagesLoaded"
+			],
+			[
+				"impo",
+				"important"
+			],
+			[
+				"push",
+				"pushState"
+			],
+			[
+				"marb",
+				"margin-bottom"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"guter",
+				"gutter-big"
+			],
+			[
+				"move",
+				"moveByHistoty"
+			],
+			[
+				"as",
+				"absolute"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"load",
+				"loading"
+			],
+			[
+				"loading",
+				"loading-flat"
+			],
+			[
+				"get_category",
+				"get_category_link"
+			],
+			[
+				"get_the",
+				"get_the_ID"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"rea",
+				"ready"
+			],
+			[
+				"bakc",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"page",
+				"pageActu"
+			],
+			[
+				"th",
+				"$thumbnail〔variable〕"
+			],
+			[
+				"gu",
+				"gutter"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"whi",
+				"white-space"
+			],
+			[
+				"rgb",
+				"rgba\trgba()"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"rb",
+				"rgba\trgba()"
+			],
+			[
+				"actu",
+				"actualités"
+			],
+			[
+				"list-",
+				"list-basic"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"vide",
+				"video_a_lhonneur"
+			],
+			[
+				"bodcolo",
+				"border-bottom-color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"fz",
+				"font-size"
+			],
+			[
+				"endfore",
+				"endforeach〔keyword〕"
+			],
+			[
+				"flex-",
+				"flex-6"
+			],
+			[
+				"the",
+				"the_field"
+			],
+			[
+				"asite",
+				"aside-width"
+			],
+			[
+				"s",
+				"stretch"
+			],
+			[
+				"the_",
+				"the_title"
+			],
+			[
+				"get_",
+				"get_field"
+			],
+			[
+				"marign",
+				"margin-left"
+			],
+			[
+				"get_th",
+				"get_the_title"
+			],
+			[
+				"inln",
+				"inline-block"
+			],
+			[
+				"rela",
+				"relations"
+			],
+			[
+				"artiste",
+				"$artisteID〔variable〕"
+			],
+			[
+				"orde",
+				"orderby"
+			],
+			[
+				"aside",
+				"aside-open"
+			],
+			[
+				"pd",
+				"padding-left"
+			],
+			[
+				"re",
+				"rem-calc"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bordo",
+				"border-bottom"
+			],
+			[
+				"sho",
+				"show-for-small"
+			],
+			[
+				"in",
+				"initial"
+			],
+			[
+				"nav",
+				"nav-menu"
+			],
+			[
+				"togl",
+				"toggleClass〔function〕"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"template",
+				"template_directory"
+			],
+			[
+				"op",
+				"opacity"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 379.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pc",
+				"Package Control: Install Package"
+			],
+			[
+				"pl",
+				"Package Control: List Packages"
+			],
+			[
+				"bro",
+				"SFTP: Browse Server…"
+			],
+			[
+				"brow",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"rem",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"remo",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"br",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"b",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"brp",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pcr",
+				"Package Control: Remove Package"
+			],
+			[
+				"ren",
+				"Emmet: Rename Tag"
+			],
+			[
+				"rena",
+				"Emmet: Rename Tag"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux"
+	],
+	"file_history":
+	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-20.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/mixins.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/content.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/adresse.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/footer.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/footer.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-16.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/utils.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-14.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/header.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/comments.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/slidr.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/loop.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-10.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/style.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-278.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/mediaqueries.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/booking.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/404.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/search.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/searchform.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/author.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/style.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/variables.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/pages.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/likes.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/modules/post-like.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/index.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/slideshow-blog.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/reset.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/464f839651947841b348cf56d5dcd1158a6fae79/layout.scssc",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/wordpress.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sidebar.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/464f839651947841b348cf56d5dcd1158a6fae79/utils.scssc",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/tag.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/pagination.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-18.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1504856818/mapped/var/www/html/client/eddhostel/wp-config.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/fonts.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/Gruntfile.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/.sass-cache/c88e58df36ee98653ef1e750c722469ff5a9b68a/mixins.scssc",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/jQuery.headroom.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/lib/Headroom.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/nav.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/wrapper.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sftp-config.json",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/package.json",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/style.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/projet.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/pagination.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/index.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/category.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/css/shame.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1499722280/mapped/var/www/html/nuagegraphik-com/wp-config.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1499715285/mapped/var/www/html/laventurierviking/wp-config.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1499692829/mapped/var/www/html/laventurierviking/wp-config.php",
+		"/Users/nuagegraphik/.ssh/config",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/page.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/author.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/archive.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/ajax-single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/404.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/loop.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/modules/post-like.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-uglify/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-uglify/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-uglify/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-uglify/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-uglify/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/searchform.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/maps/map-amerique-latine.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/tag.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-contrib-watch/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/node_modules/rsyncwrapper/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/node_modules/rsyncwrapper/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/node_modules/rsyncwrapper/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/node_modules/rsyncwrapper/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/node_modules/rsyncwrapper/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/grunt-legacy-log-utils/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/grunt-legacy-log-utils/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/grunt-legacy-log-utils/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/grunt-legacy-log-utils/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/grunt-legacy-log-utils/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.compat.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.compat.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/dist/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-util/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/grunt-legacy-util/node_modules/lodash/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/lodash/lodash.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/lodash/lodash.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
+		"/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/wysiwyg.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/page.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 173.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 122.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 122.0
+	},
+	"pinned_build_system": "",
+	"project": "margaux.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"foot",
+				"css/sass/partials/footer.scss"
+			],
+			[
+				"util",
+				"css/sass/partials/utils.scss"
+			],
+			[
+				"foo",
+				"css/sass/partials/footer.scss"
+			],
+			[
+				"cont",
+				"css/sass/partials/content.scss"
+			],
+			[
+				"scri",
+				"js/scripts.js"
+			],
+			[
+				"function",
+				"functions.php"
+			],
+			[
+				"mix",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"head",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"footer",
+				"footer.php"
+			],
+			[
+				"medi",
+				"css/sass/partials/mediaqueries.scss"
+			],
+			[
+				"scrip",
+				"js/scripts.js"
+			],
+			[
+				"mixi",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"uti",
+				"css/sass/partials/utils.scss"
+			],
+			[
+				"slir",
+				"js/lib/slidr.js"
+			],
+			[
+				"scr",
+				"js/scripts.js"
+			],
+			[
+				"slidr",
+				"js/lib/slidr.js"
+			],
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"hea",
+				"header.php"
+			],
+			[
+				"contn",
+				"css/sass/partials/content.scss"
+			],
+			[
+				"slide",
+				"slideshow.php"
+			],
+			[
+				"pages",
+				"css/sass/partials/pages.scss"
+			],
+			[
+				"media",
+				"css/sass/partials/mediaqueries.scss"
+			],
+			[
+				"heade",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"lay",
+				"css/sass/partials/layout.scss"
+			],
+			[
+				"var",
+				"css/sass/modules/variables.scss"
+			],
+			[
+				"boo",
+				"booking.php"
+			],
+			[
+				"lik",
+				"css/sass/partials/likes.scss"
+			],
+			[
+				"sin",
+				"single.php"
+			],
+			[
+				"loop",
+				"loop.php"
+			],
+			[
+				"reset",
+				"css/sass/partials/reset.scss"
+			],
+			[
+				"he",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"la",
+				"css/sass/partials/layout.scss"
+			],
+			[
+				"header",
+				"css/sass/partials/header.scss"
+			],
+			[
+				"comm",
+				"comments.php"
+			],
+			[
+				"singl",
+				"single.php"
+			],
+			[
+				"side",
+				"sidebar.php"
+			],
+			[
+				"pagina",
+				"pagination.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"loo",
+				"loop.php"
+			],
+			[
+				"page14",
+				"page-14.php"
+			],
+			[
+				"font",
+				"css/sass/modules/fonts.scss"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"wor",
+				"css/sass/partials/wordpress.scss"
+			],
+			[
+				"page",
+				"page-10.php"
+			],
+			[
+				"mi",
+				"css/sass/modules/mixins.scss"
+			],
+			[
+				"p",
+				"page-10.php"
+			],
+			[
+				"headr",
+				"js/lib/jQuery.headroom.js"
+			],
+			[
+				"slid",
+				"slideshow.php"
+			],
+			[
+				"adre",
+				"adresse.php"
+			],
+			[
+				"pro",
+				"templates/projet.php"
+			],
+			[
+				"proj",
+				"templates/projet.php"
+			],
+			[
+				"commen",
+				"modules/comments.php"
+			],
+			[
+				"conten",
+				"content-tools.php"
+			],
+			[
+				"comment",
+				"templates/comment.php"
+			],
+			[
+				"vari",
+				".sass-cache/6d00ae1f521ae6bd89137c7dab70ae1fdf7d80c6/variables.scssc"
+			],
+			[
+				"g",
+				"Gruntfile.js"
+			],
+			[
+				"nav",
+				"dwlaventurier/lib/nav.php"
+			],
+			[
+				"ajax",
+				"vikingDiaries/ajax-single.php"
+			],
+			[
+				"mapeur",
+				"vikingDiaries/maps/map-eurasie.php"
+			],
+			[
+				"ajas",
+				"vikingDiaries/ajax-single.php"
+			],
+			[
+				"aj",
+				"vikingDiaries/ajax-single.php"
+			],
+			[
+				"comments",
+				"vikingDiaries/modules/comments.php"
+			],
+			[
+				"pos",
+				"vikingDiaries/js/lib/post-like.js"
+			],
+			[
+				"posli",
+				"vikingDiaries/js/lib/post-like.js"
+			],
+			[
+				"shame",
+				"vikingDiaries/scss/partials/shame.scss"
+			],
+			[
+				"layou",
+				"vikingDiaries/scss/partials/layout.scss"
+			],
+			[
+				"style",
+				"vikingDiaries/scss/style.scss"
+			],
+			[
+				"sytl",
+				"vikingDiaries/style.css"
+			],
+			[
+				"inde",
+				"vikingDiaries/index.php"
+			],
+			[
+				"in",
+				"dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/import-no-semi.less"
+			],
+			[
+				"arch",
+				"vikingDiaries/archive.php"
+			],
+			[
+				"",
+				"vikingDiaries/scss/partials/utils.scss"
+			],
+			[
+				"basi",
+				"vikingDiaries/node_modules/grunt-rsync/tests/basic.js"
+			],
+			[
+				"info",
+				"oniris/templates/infos_pratiques.php"
+			],
+			[
+				"blo",
+				"oniris/scss/elements/_bloc.scss"
+			],
+			[
+				"elem",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"ele",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"sim",
+				"oniris/templates/simple.php"
+			],
+			[
+				"el",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"fo",
+				"oniris/footer.php"
+			],
+			[
+				"foote",
+				"oniris/footer.php"
+			],
+			[
+				"funt",
+				"oniris/functions.php"
+			],
+			[
+				"gallery",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"intro",
+				"oniris/elements/intro-expositions.php"
+			],
+			[
+				"se",
+				"oniris/search-home.php"
+			],
+			[
+				"icon",
+				"oniris/scss/_icons.scss"
+			],
+			[
+				"actu",
+				"oniris/templates/actu-highlight.php"
+			],
+			[
+				"search-home",
+				"oniris/search-home.php"
+			],
+			[
+				"actuhi",
+				"oniris/templates/actu-highlight.php"
+			],
+			[
+				"ctus",
+				"oniris/templates/actus.php"
+			],
+			[
+				"loopfl",
+				"oniris/loop-flex.php"
+			],
+			[
+				"rela",
+				"oniris/elements/relation-artistes.php"
+			],
+			[
+				"rel",
+				"oniris/templates/relations.php"
+			],
+			[
+				"video",
+				"oniris/templates/videos-list.php"
+			],
+			[
+				"introf",
+				"oniris/elements/intro-foires.php"
+			],
+			[
+				"lopp",
+				"oniris/loop-flex.php"
+			],
+			[
+				"lis",
+				"oniris/loop-list.php"
+			],
+			[
+				"inrto",
+				"oniris/elements/intro-foires.php"
+			],
+			[
+				"intr",
+				"oniris/elements/intro-expositions.php"
+			],
+			[
+				"mai",
+				"oniris/js/main.js"
+			],
+			[
+				"funct",
+				"oniris/functions.php"
+			],
+			[
+				"layout",
+				"oniris/scss/_layout.scss"
+			],
+			[
+				"mixin",
+				"oniris/scss/_mixins.scss"
+			],
+			[
+				"singleact",
+				"oniris/elements/single-actu.php"
+			],
+			[
+				"layo",
+				"oniris/scss/_layout.scss"
+			],
+			[
+				"m",
+				"oniris/js/main.js"
+			],
+			[
+				"flex",
+				"oniris/loop-flex.php"
+			],
+			[
+				"simp",
+				"oniris/templates/simple.php"
+			],
+			[
+				"functi",
+				"oniris/functions.php"
+			],
+			[
+				"ma",
+				"oniris/js/main.js"
+			],
+			[
+				"va",
+				"oniris/scss/_variables.scss"
+			],
+			[
+				"grun",
+				"oniris/Gruntfile.js"
+			],
+			[
+				"funti",
+				"oniris/functions.php"
+			],
+			[
+				"vai",
+				"oniris/scss/_variables.scss"
+			],
+			[
+				"loopli",
+				"oniris/loop-list.php"
+			],
+			[
+				"foto",
+				"oniris/scss/elements/_fotorama-base.scss"
+			],
+			[
+				"fot",
+				"oniris/css/fotorama.css"
+			],
+			[
+				"gall",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"aside",
+				"oniris/scss/elements/_aside.scss"
+			],
+			[
+				"galler",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"sha",
+				"oniris/scss/_shame.scss"
+			],
+			[
+				"lop",
+				"oniris/loop-flex.php"
+			],
+			[
+				"sham",
+				"oniris/scss/_shame.scss"
+			],
+			[
+				"galle",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"fu",
+				"oniris/ft/asap-regular-demo.html"
+			],
+			[
+				"single",
+				"oniris/single.php"
+			],
+			[
+				"si",
+				"oniris/templates/simple.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 318.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

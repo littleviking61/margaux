@@ -1,33 +1,27 @@
 {
-  "name":     "storefront",
-  "title":    "Storefront",
-  "version":  "2.2.4",
-  "homepage": "http://woocommerce.com/storefront/",
+  "name": "eddhostel",
+  "version": "2.0.0",
+  "description": "eddhostel v2",
   "repository": {
     "type": "git",
-    "url":  "https://github.com/woothemes/storefront.git"
+    "url": "git://github.com/littleviking61/eddhostel.git"
   },
-  "license": "GPL-2.0+",
-  "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt":                  "~1.0.1",
-    "grunt-checktextdomain":  "^1.0.1",
-    "grunt-contrib-cssmin":   "~2.1.0",
-    "grunt-contrib-jshint":   "~1.1.0",
-    "grunt-contrib-uglify":   "~2.3.0",
-    "grunt-contrib-watch":    "^1.0.0",
-    "grunt-wp-i18n":          "^1.0.0",
-    "grunt-rtlcss":           "~2.0.1",
-    "grunt-sass":             "~2.0.0",
-    "node-sass":              "~4.5.2",
-    "susy":                   "~2.2.12",
-    "node-bourbon":           "~4.2.8",
-    "grunt-postcss":          "^0.8.0",
-    "autoprefixer":           "^6.7.7",
-    "grunt-contrib-copy":     "^1.0.0"
+    "grunt": "~1.0.1",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-uglify": "~3.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-rsync": "~2.0.1",
+    "load-grunt-tasks": "~3.5.2"
   },
-  "engines": {
-    "node":                   ">=0.8.0",
-    "npm":                    ">=1.1.0"
+  "author": "",
+  "license": "nuagegraphik",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "susy": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

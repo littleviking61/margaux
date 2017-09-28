@@ -1,38 +1,45 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package storefront
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+	<main role="main" aria-label="Content">
+		<!-- section -->
+		<section>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+			<h1><?php the_title(); ?></h1>
 
-			<?php while ( have_posts() ) : the_post();
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				do_action( 'storefront_page_before' );
+			<!-- article -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				get_template_part( 'content', 'page' );
+				<?php the_content(); ?>
 
-				/**
-				 * Functions hooked in to storefront_page_after action
-				 *
-				 * @hooked storefront_display_comments - 10
-				 */
-				do_action( 'storefront_page_after' );
+				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-			endwhile; // End of the loop. ?>
+				<br class="clear">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<?php edit_post_link(); ?>
 
-<?php
-do_action( 'storefront_sidebar' );
-get_footer();
+			</article>
+			<!-- /article -->
+
+		<?php endwhile; ?>
+
+		<?php else: ?>
+
+			<!-- article -->
+			<article>
+
+				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+			</article>
+			<!-- /article -->
+
+		<?php endif; ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

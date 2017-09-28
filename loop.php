@@ -1,29 +1,47 @@
-<?php
-/**
- * The loop template file.
- *
- * Included on pages like index.php, archive.php and search.php to display a loop of posts
- * Learn more: http://codex.wordpress.org/The_Loop
- *
- * @package storefront
- */
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-do_action( 'storefront_loop_before' );
+	<!-- article -->
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-while ( have_posts() ) : the_post();
+		<!-- post thumbnail -->
+		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+			</a>
+		<?php endif; ?>
+		<!-- /post thumbnail -->
 
-	/**
-	 * Include the Post-Format-specific template for the content.
-	 * If you want to override this in a child theme, then include a file
-	 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-	 */
-	get_template_part( 'content', get_post_format() );
+		<!-- post title -->
+		<h2>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		</h2>
+		<!-- /post title -->
 
-endwhile;
+		<!-- post details -->
+		<span class="date">
+			<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
+				<?php the_date(); ?> <?php the_time(); ?>
+			</time>
+		</span>
+		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+		<!-- /post details -->
 
-/**
- * Functions hooked in to storefront_paging_nav action
- *
- * @hooked storefront_paging_nav - 10
- */
-do_action( 'storefront_loop_after' );
+		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+
+		<?php edit_post_link(); ?>
+
+	</article>
+	<!-- /article -->
+
+<?php endwhile; ?>
+
+<?php else: ?>
+
+	<!-- article -->
+	<article>
+		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+	</article>
+	<!-- /article -->
+
+<?php endif; ?>

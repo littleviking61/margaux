@@ -1,39 +1,30 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package storefront
- */
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
 
-?>
+				<!-- copyright -->
+				<p class="copyright">
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
+					<a href="//wordpress.org">WordPress</a> &amp; <a href="//html5blank.com">HTML5 Blank</a>.
+				</p>
+				<!-- /copyright -->
 
-		</div><!-- .col-full -->
-	</div><!-- #content -->
+			</footer>
+			<!-- /footer -->
 
-	<?php do_action( 'storefront_before_footer' ); ?>
+		</div>
+		<!-- /wrapper -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="col-full">
+		<?php wp_footer(); ?>
 
-			<?php
-			/**
-			 * Functions hooked in to storefront_footer action
-			 *
-			 * @hooked storefront_footer_widgets - 10
-			 * @hooked storefront_credit         - 20
-			 */
-			do_action( 'storefront_footer' ); ?>
+		<!-- analytics -->
+		<script>
+		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
+		ga('send', 'pageview');
+		</script>
 
-		</div><!-- .col-full -->
-	</footer><!-- #colophon -->
-
-	<?php do_action( 'storefront_after_footer' ); ?>
-
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
+	</body>
 </html>

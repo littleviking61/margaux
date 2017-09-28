@@ -1,0 +1,25 @@
+/**
+ * partials/header
+ * ---
+ */
+
+// Header container
+.header {
+}
+
+// Logo
+.logo {
+}
+
+/* headroom */
+
+.headroom{
+}
+
+.headroom--pinned {
+  @include transform(translateY(0%));
+}
+
+.headroom--unpinned, .headroom--top {
+  @include transform(translateY(-100%));
+}

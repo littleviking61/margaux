@@ -1,0 +1,68 @@
+/**
+ * partials/layout
+ * ---
+ * Layout
+ */
+
+$susy: (
+  'columns': susy-repeat(12, 70px),
+  'gutters': 30px,
+  'spread': 'narrow',
+  'container-spread': 'narrow',
+);
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+	@include flexbox();
+	@include flex-direction(column);
+}
+
+main{
+	@include flex(1);
+}
+
+.container{
+	max-width: $wrapper-width;
+  padding: 0 $margin-horizontal-large;
+  margin: 0 auto;
+}
+
+.row{
+	@at-root section#{&}{
+		padding: 60px 0;
+	}
+
+	@at-root ul#{&}{
+		@include reset-box-ul();
+	}
+
+	@include flexbox();
+
+	&.vcenter{
+		@include align-items(center);
+	}
+
+	&.hcenter{
+		@include justify-content(center);
+	}
+
+	> *{
+		@include flex-shrink(0);
+	  margin-right: gutter();
+
+	  &:last-child {
+	    margin-right: 0;
+	  }
+	}
+}
+
+article{
+	> section{
+		margin-bottom: $gap;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

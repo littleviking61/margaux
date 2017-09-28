@@ -1,32 +1,19 @@
-<?php
-/**
- * The template for displaying search results pages.
- *
- * @package storefront
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+	<main role="main" aria-label="Content">
+		<!-- section -->
+		<section>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+			<h1><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
-		<?php if ( have_posts() ) : ?>
+			<?php get_template_part('loop'); ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_attr__( 'Search Results for: %s', 'storefront' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+			<?php get_template_part('pagination'); ?>
 
-			<?php get_template_part( 'loop' );
+		</section>
+		<!-- /section -->
+	</main>
 
-		else :
+<?php get_sidebar(); ?>
 
-			get_template_part( 'content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-do_action( 'storefront_sidebar' );
-get_footer();
+<?php get_footer(); ?>

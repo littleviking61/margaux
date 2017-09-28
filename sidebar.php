@@ -1,15 +1,15 @@
-<?php
-/**
- * The sidebar containing the main widget area.
- *
- * @package storefront
- */
+<!-- sidebar -->
+<aside class="sidebar" role="complementary">
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
-?>
+	<?php get_template_part('searchform'); ?>
 
-<div id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+	<div class="sidebar-widget">
+		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+	</div>
+
+	<div class="sidebar-widget">
+		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
+	</div>
+
+</aside>
+<!-- /sidebar -->
