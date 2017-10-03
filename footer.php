@@ -14,7 +14,7 @@
 					
 					<div class="vcard">
 						<p class="adr">
-							<?php get_field('adresse_pied_de_page', 'option'); ?>
+							<?= get_field('adresse_pied_de_page', 'option'); ?>
 						</p>
 					</div>
 
@@ -24,7 +24,7 @@
 
 					<div class="horaire">
 						<p>
-							<?php get_field('horaire_douverture', 'option'); ?>
+							<?= get_field('horaire_douverture', 'option'); ?>
 						</p>
 					</div>
 

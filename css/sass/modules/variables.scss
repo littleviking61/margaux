@@ -22,17 +22,20 @@ $body-bg: #fff;
 $selection-bg: #04A4CC;
 
 $featured: #5a3682;
-$grey: #959595;
-$lightGrey: #e5e1d6;
-$darkGrey: #aca895;
+$grey: #dbdbdb;
+$lightGrey: #e5e1d6; /*ok*/
+$darkGrey: #aca895; /*ok*/
 $dark: #313131;
+$black: #1a1a1a;
 
 /**
  * Grid
  */
 
 $headerHeight: 90px;
+$footerHeight: 180px;
 $headroomHeight: 70px;
+$topbarHeight: 40px;
 $wrapper-width: 1170px;
 $halfWidth: $wrapper-width /2;
 $slideshowHeight: 475px;

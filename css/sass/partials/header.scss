@@ -5,6 +5,28 @@
 
 // Header container
 .header {
+	position: relative;
+	width: 100%;
+	height: $headerHeight;
+	background-color: white;
+
+}
+
+.header, .top-bar{
+	ul, nav{
+		@include flexbox();
+	}
+}
+
+.top-bar{
+	position: relative;
+	width: 100%;
+	height: $topbarHeight;
+	background-color: $black;
+	
+	&, a{
+		color: $grey;
+	}
 }
 
 // Logo

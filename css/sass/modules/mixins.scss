@@ -12,6 +12,7 @@
 @mixin reset-box-ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 
   li{
     list-style: none;

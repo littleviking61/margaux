@@ -73,11 +73,6 @@ p:first-child{
 
 nav{
   ul{
-    padding: 0;
-    margin: 0;
-  }
-
-  li{
-    list-style: none;
+    @include reset-box-ul();
   }
 }

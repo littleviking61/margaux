@@ -4,5 +4,12 @@
  */
 
 .footer {
-
+	position: relative;
+	width: 100%;
+	height: $footerHeight;
+	background-color: $black;
+	
+	&, a{
+		color: $grey;
+	}
 }

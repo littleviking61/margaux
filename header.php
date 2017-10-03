@@ -31,14 +31,25 @@
 
 			<!-- header -->
 			<div class="top-bar">
-				<nav class="container">
-					<?php html5blank_nav('top-menu'); ?>
-				</nav>
+				<div class="container row">
+
+					<div class="vcard">
+						<p class="adr">
+							<?= get_field('adresse_en-tete', 'option'); ?>
+						</p>
+					</div>
+
+					<nav>
+						<?php html5blank_nav('top-menu'); ?>
+
+						<?php html5blank_nav('social-menu'); ?>
+					</nav>
+				</div>
 			</div>
 
 			<header class="header clear" role="banner">
 
-				<div class="container">
+				<div class="container row">
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
@@ -53,11 +64,10 @@
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>
 
-						<?php html5blank_nav('social-menu'); ?>
 					</nav>
 					<!-- /nav -->
 					<!-- /nav -->
 				</div>
-				
+
 			</header>
 			<!-- /header -->
