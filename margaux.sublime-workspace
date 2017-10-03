@@ -519,6 +519,83 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "<?php\n/**\n * The template for displaying product content in the single-product.php template\n *\n * This template can be overridden by copying it to yourtheme/woocommerce/content-single-product.php.\n *\n * HOWEVER, on occasion WooCommerce will need to update template files and you\n * (the theme developer) will need to copy the new files to your theme to\n * maintain compatibility. We try to do this as little as possible, but it does\n * happen. When this occurs the version of the template file will be bumped and\n * the readme will list any important changes.\n *\n * @see \t    https://docs.woocommerce.com/document/template-structure/\n * @author \t\tWooThemes\n * @package \tWooCommerce/Templates\n * @version     3.0.0\n */\n\nif ( ! defined( 'ABSPATH' ) ) {\n\texit; // Exit if accessed directly\n}\n\n?>\n\n<?php\n\t/**\n\t * woocommerce_before_single_product hook.\n\t *\n\t * @hooked wc_print_notices - 10\n\t */\n\t do_action( 'woocommerce_before_single_product' );\n\n\t if ( post_password_required() ) {\n\t \techo get_the_password_form();\n\t \treturn;\n\t }\n?>\n\n<div id=\"product-<?php the_ID(); ?>\" <?php post_class(); ?>>\n\n\t<?php\n\t\t/**\n\t\t * woocommerce_before_single_product_summary hook.\n\t\t *\n\t\t * @hooked woocommerce_show_product_sale_flash - 10\n\t\t * @hooked woocommerce_show_product_images - 20\n\t\t */\n\t\tdo_action( 'woocommerce_before_single_product_summary' );\n\t?>\n\t\t\n\t<div class=\"summary entry-summary\">\n\n\t\t<?php\n\t\t\t/**\n\t\t\t * woocommerce_single_product_summary hook.\n\t\t\t *\n\t\t\t * @hooked woocommerce_template_single_title - 5\n\t\t\t * @hooked woocommerce_template_single_rating - 10\n\t\t\t * @hooked woocommerce_template_single_price - 10\n\t\t\t * @hooked woocommerce_template_single_excerpt - 20\n\t\t\t * @hooked woocommerce_template_single_add_to_cart - 30\n\t\t\t * @hooked woocommerce_template_single_meta - 40\n\t\t\t * @hooked woocommerce_template_single_sharing - 50\n\t\t\t * @hooked WC_Structured_Data::generate_product_data() - 60\n\t\t\t */\n\t\t\tdo_action( 'woocommerce_single_product_summary' );\n\t\t?>\n\n\t</div><!-- .summary -->\n\n\t<?php\n\t\t/**\n\t\t * woocommerce_after_single_product_summary hook.\n\t\t *\n\t\t * @hooked woocommerce_output_product_data_tabs - 10\n\t\t * @hooked woocommerce_upsell_display - 15\n\t\t * @hooked woocommerce_output_related_products - 20\n\t\t */\n\t\tdo_action( 'woocommerce_after_single_product_summary' );\n\t?>\n\n</div><!-- #product-<?php the_ID(); ?> -->\n\n<?php do_action( 'woocommerce_after_single_product' ); ?>\n",
+			"file": "content-single-product.php",
+			"file_size": 2381,
+			"file_write_time": 131510851200000000,
+			"settings":
+			{
+				"buffer_size": 2381,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "woocommerce/single-product/title.php",
+			"settings":
+			{
+				"buffer_size": 800,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 19076,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1506675640/mapped/var/www/html/client/margaux/wp-content/plugins/woocommerce-products-filter/js/front.js",
+			"settings":
+			{
+				"buffer_size": 39898,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "woocommerce/single-product/tabs/tabs.php",
+			"settings":
+			{
+				"buffer_size": 1879,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front-page.php",
+			"settings":
+			{
+				"buffer_size": 434,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n/**\n * Storefront template functions.\n *\n * @package storefront\n */\n\nif ( ! function_exists( 'storefront_display_comments' ) ) {\n\t/**\n\t * Storefront display comments\n\t *\n\t * @since  1.0.0\n\t */\n\tfunction storefront_display_comments() {\n\t\t// If comments are open or we have at least one comment, load up the comment template.\n\t\tif ( comments_open() || '0' != get_comments_number() ) :\n\t\t\tcomments_template();\n\t\tendif;\n\t}\n}\n\nif ( ! function_exists( 'storefront_comment' ) ) {\n\t/**\n\t * Storefront comment template\n\t *\n\t * @param array $comment the comment array.\n\t * @param array $args the comment args.\n\t * @param int   $depth the comment depth.\n\t * @since 1.0.0\n\t */\n\tfunction storefront_comment( $comment, $args, $depth ) {\n\t\tif ( 'div' == $args['style'] ) {\n\t\t\t$tag = 'div';\n\t\t\t$add_below = 'comment';\n\t\t} else {\n\t\t\t$tag = 'li';\n\t\t\t$add_below = 'div-comment';\n\t\t}\n\t\t?>\n\t\t<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id=\"comment-<?php comment_ID() ?>\">\n\t\t<div class=\"comment-body\">\n\t\t<div class=\"comment-meta commentmetadata\">\n\t\t\t<div class=\"comment-author vcard\">\n\t\t\t<?php echo get_avatar( $comment, 128 ); ?>\n\t\t\t<?php printf( wp_kses_post( '<cite class=\"fn\">%s</cite>', 'storefront' ), get_comment_author_link() ); ?>\n\t\t\t</div>\n\t\t\t<?php if ( '0' == $comment->comment_approved ) : ?>\n\t\t\t\t<em class=\"comment-awaiting-moderation\"><?php esc_attr_e( 'Your comment is awaiting moderation.', 'storefront' ); ?></em>\n\t\t\t\t<br />\n\t\t\t<?php endif; ?>\n\n\t\t\t<a href=\"<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>\" class=\"comment-date\">\n\t\t\t\t<?php echo '<time datetime=\"' . get_comment_date( 'c' ) . '\">' . get_comment_date() . '</time>'; ?>\n\t\t\t</a>\n\t\t</div>\n\t\t<?php if ( 'div' != $args['style'] ) : ?>\n\t\t<div id=\"div-comment-<?php comment_ID() ?>\" class=\"comment-content\">\n\t\t<?php endif; ?>\n\t\t<div class=\"comment-text\">\n\t\t<?php comment_text(); ?>\n\t\t</div>\n\t\t<div class=\"reply\">\n\t\t<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>\n\t\t<?php edit_comment_link( __( 'Edit', 'storefront' ), '  ', '' ); ?>\n\t\t</div>\n\t\t</div>\n\t\t<?php if ( 'div' != $args['style'] ) : ?>\n\t\t</div>\n\t\t<?php endif; ?>\n\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_footer_widgets' ) ) {\n\t/**\n\t * Display the footer widget regions.\n\t *\n\t * @since  1.0.0\n\t * @return void\n\t */\n\tfunction storefront_footer_widgets() {\n\t\t$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );\n\t\t$regions = intval( apply_filters( 'storefront_footer_widget_columns', 4 ) );\n\n\t\tfor ( $row = 1; $row <= $rows; $row++ ) :\n\n\t\t\t// Defines the number of active columns in this footer row.\n\t\t\tfor ( $region = $regions; 0 < $region; $region-- ) {\n\t\t\t\tif ( is_active_sidebar( 'footer-' . strval( $region + $regions * ( $row - 1 ) ) ) ) {\n\t\t\t\t\t$columns = $region;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif ( isset( $columns ) ) : ?>\n\t\t\t\t<div class=<?php echo '\"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix\"'; ?>><?php\n\n\t\t\t\t\tfor ( $column = 1; $column <= $columns; $column++ ) :\n\t\t\t\t\t\t$footer_n = $column + $regions * ( $row - 1 );\n\n\t\t\t\t\t\tif ( is_active_sidebar( 'footer-' . strval( $footer_n ) ) ) : ?>\n\n\t\t\t\t\t\t\t<div class=\"block footer-widget-<?php echo strval( $column ); ?>\">\n\t\t\t\t\t\t\t\t<?php dynamic_sidebar( 'footer-' . strval( $footer_n ) ); ?>\n\t\t\t\t\t\t\t</div><?php\n\n\t\t\t\t\t\tendif;\n\t\t\t\t\tendfor; ?>\n\n\t\t\t\t</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> --><?php\n\n\t\t\t\tunset( $columns );\n\t\t\tendif;\n\t\tendfor;\n\t}\n}\n\nif ( ! function_exists( 'storefront_credit' ) ) {\n\t/**\n\t * Display the theme credit\n\t *\n\t * @since  1.0.0\n\t * @return void\n\t */\n\tfunction storefront_credit() {\n\t\t?>\n\t\t<div class=\"site-info\">\n\t\t\t<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>\n\t\t\t<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>\n\t\t\t<br /> <?php printf( esc_attr__( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href=\"http://www.woocommerce.com\" title=\"WooCommerce - The Best eCommerce Platform for WordPress\" rel=\"author\">WooCommerce</a>' ); ?>\n\t\t\t<?php } ?>\n\t\t</div><!-- .site-info -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_header_widget_region' ) ) {\n\t/**\n\t * Display header widget region\n\t *\n\t * @since  1.0.0\n\t */\n\tfunction storefront_header_widget_region() {\n\t\tif ( is_active_sidebar( 'header-1' ) ) {\n\t\t?>\n\t\t<div class=\"header-widget-region\" role=\"complementary\">\n\t\t\t<div class=\"col-full\">\n\t\t\t\t<?php dynamic_sidebar( 'header-1' ); ?>\n\t\t\t</div>\n\t\t</div>\n\t\t<?php\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_site_branding' ) ) {\n\t/**\n\t * Site branding wrapper and display\n\t *\n\t * @since  1.0.0\n\t * @return void\n\t */\n\tfunction storefront_site_branding() {\n\t\t?>\n\t\t<div class=\"site-branding\">\n\t\t\t<?php storefront_site_title_or_logo(); ?>\n\t\t</div>\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_site_title_or_logo' ) ) {\n\t/**\n\t * Display the site title or logo\n\t *\n\t * @since 2.1.0\n\t * @param bool $echo Echo the string or return it.\n\t * @return string\n\t */\n\tfunction storefront_site_title_or_logo( $echo = true ) {\n\t\tif ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {\n\t\t\t$logo = get_custom_logo();\n\t\t\t$html = is_home() ? '<h1 class=\"logo\">' . $logo . '</h1>' : $logo;\n\t\t} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {\n\t\t\t// Copied from jetpack_the_site_logo() function.\n\t\t\t$logo    = site_logo()->logo;\n\t\t\t$logo_id = get_theme_mod( 'custom_logo' ); // Check for WP 4.5 Site Logo\n\t\t\t$logo_id = $logo_id ? $logo_id : $logo['id']; // Use WP Core logo if present, otherwise use Jetpack's.\n\t\t\t$size    = site_logo()->theme_lenght();\n\t\t\t$html    = sprintf( '<a href=\"%1$s\" class=\"site-logo-link\" rel=\"home\" itemprop=\"url\">%2$s</a>',\n\t\t\t\tesc_url( home_url( '/' ) ),\n\t\t\t\twp_get_attachment_image(\n\t\t\t\t\t$logo_id,\n\t\t\t\t\t$size,\n\t\t\t\t\tfalse,\n\t\t\t\t\tarray(\n\t\t\t\t\t\t'class'     => 'site-logo attachment-' . $size,\n\t\t\t\t\t\t'data-size' => $size,\n\t\t\t\t\t\t'itemprop'  => 'logo'\n\t\t\t\t\t)\n\t\t\t\t)\n\t\t\t);\n\n\t\t\t$html = apply_filters( 'jetpack_the_site_logo', $html, $logo, $size );\n\t\t} else {\n\t\t\t$tag = is_home() ? 'h1' : 'div';\n\n\t\t\t$html = '<' . esc_attr( $tag ) . ' class=\"beta site-title\"><a href=\"' . esc_url( home_url( '/' ) ) . '\" rel=\"home\">' . esc_html( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';\n\n\t\t\tif ( '' !== get_bloginfo( 'description' ) ) {\n\t\t\t\t$html .= '<p class=\"site-description\">' . esc_html( get_bloginfo( 'description', 'display' ) ) . '</p>';\n\t\t\t}\n\t\t}\n\n\t\tif ( ! $echo ) {\n\t\t\treturn $html;\n\t\t}\n\n\t\techo $html;\n\t}\n}\n\nif ( ! function_exists( 'storefront_primary_navigation' ) ) {\n\t/**\n\t * Display Primary Navigation\n\t *\n\t * @since  1.0.0\n\t * @return void\n\t */\n\tfunction storefront_primary_navigation() {\n\t\t?>\n\t\t<nav id=\"site-navigation\" class=\"main-navigation\" role=\"navigation\" aria-label=\"<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>\">\n\t\t<button class=\"menu-toggle\" aria-controls=\"site-navigation\" aria-expanded=\"false\"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>\n\t\t\t<?php\n\t\t\twp_nav_menu(\n\t\t\t\tarray(\n\t\t\t\t\t'theme_location'\t=> 'primary',\n\t\t\t\t\t'container_class'\t=> 'primary-navigation',\n\t\t\t\t\t)\n\t\t\t);\n\n\t\t\twp_nav_menu(\n\t\t\t\tarray(\n\t\t\t\t\t'theme_location'\t=> 'handheld',\n\t\t\t\t\t'container_class'\t=> 'handheld-navigation',\n\t\t\t\t\t)\n\t\t\t);\n\t\t\t?>\n\t\t</nav><!-- #site-navigation -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_secondary_navigation' ) ) {\n\t/**\n\t * Display Secondary Navigation\n\t *\n\t * @since  1.0.0\n\t * @return void\n\t */\n\tfunction storefront_secondary_navigation() {\n\t    if ( has_nav_menu( 'secondary' ) ) {\n\t\t    ?>\n\t\t    <nav class=\"secondary-navigation\" role=\"navigation\" aria-label=\"<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>\">\n\t\t\t    <?php\n\t\t\t\t    wp_nav_menu(\n\t\t\t\t\t    array(\n\t\t\t\t\t\t    'theme_location'\t=> 'secondary',\n\t\t\t\t\t\t    'fallback_cb'\t\t=> '',\n\t\t\t\t\t    )\n\t\t\t\t    );\n\t\t\t    ?>\n\t\t    </nav><!-- #site-navigation -->\n\t\t    <?php\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_skip_links' ) ) {\n\t/**\n\t * Skip links\n\t *\n\t * @since  1.4.1\n\t * @return void\n\t */\n\tfunction storefront_skip_links() {\n\t\t?>\n\t\t<a class=\"skip-link screen-reader-text\" href=\"#site-navigation\"><?php esc_attr_e( 'Skip to navigation', 'storefront' ); ?></a>\n\t\t<a class=\"skip-link screen-reader-text\" href=\"#content\"><?php esc_attr_e( 'Skip to content', 'storefront' ); ?></a>\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_homepage_header' ) ) {\n\t/**\n\t * Display the page header without the featured image\n\t *\n\t * @since 1.0.0\n\t */\n\tfunction storefront_homepage_header() {\n\t\tedit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );\n\t\t?>\n\t\t<header class=\"entry-header\">\n\t\t\t<?php\n\t\t\tthe_title( '<h1 class=\"entry-title\">', '</h1>' );\n\t\t\t?>\n\t\t</header><!-- .entry-header -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_page_header' ) ) {\n\t/**\n\t * Display the page header\n\t *\n\t * @since 1.0.0\n\t */\n\tfunction storefront_page_header() {\n\t\t?>\n\t\t<header class=\"entry-header\">\n\t\t\t<?php\n\t\t\tstorefront_post_thumbnail( 'full' );\n\t\t\tthe_title( '<h1 class=\"entry-title\">', '</h1>' );\n\t\t\t?>\n\t\t</header><!-- .entry-header -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_page_content' ) ) {\n\t/**\n\t * Display the post content\n\t *\n\t * @since 1.0.0\n\t */\n\tfunction storefront_page_content() {\n\t\t?>\n\t\t<div class=\"entry-content\">\n\t\t\t<?php the_content(); ?>\n\t\t\t<?php\n\t\t\t\twp_link_pages( array(\n\t\t\t\t\t'before' => '<div class=\"page-links\">' . __( 'Pages:', 'storefront' ),\n\t\t\t\t\t'after'  => '</div>',\n\t\t\t\t) );\n\t\t\t?>\n\t\t</div><!-- .entry-content -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_post_header' ) ) {\n\t/**\n\t * Display the post header with a link to the single post\n\t *\n\t * @since 1.0.0\n\t */\n\tfunction storefront_post_header() {\n\t\t?>\n\t\t<header class=\"entry-header\">\n\t\t<?php\n\t\tif ( is_single() ) {\n\t\t\tstorefront_posted_on();\n\t\t\tthe_title( '<h1 class=\"entry-title\">', '</h1>' );\n\t\t} else {\n\t\t\tif ( 'post' == get_post_type() ) {\n\t\t\t\tstorefront_posted_on();\n\t\t\t}\n\n\t\t\tthe_title( sprintf( '<h2 class=\"alpha entry-title\"><a href=\"%s\" rel=\"bookmark\">', esc_url( get_permalink() ) ), '</a></h2>' );\n\t\t}\n\t\t?>\n\t\t</header><!-- .entry-header -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_post_content' ) ) {\n\t/**\n\t * Display the post content with a link to the single post\n\t *\n\t * @since 1.0.0\n\t */\n\tfunction storefront_post_content() {\n\t\t?>\n\t\t<div class=\"entry-content\">\n\t\t<?php\n\n\t\t/**\n\t\t * Functions hooked in to storefront_post_content_before action.\n\t\t *\n\t\t * @hooked storefront_post_thumbnail - 10\n\t\t */\n\t\tdo_action( 'storefront_post_content_before' );\n\n\t\tthe_content(\n\t\t\tsprintf(\n\t\t\t\t__( 'Continue reading %s', 'storefront' ),\n\t\t\t\t'<span class=\"screen-reader-text\">' . get_the_title() . '</span>'\n\t\t\t)\n\t\t);\n\n\t\tdo_action( 'storefront_post_content_after' );\n\n\t\twp_link_pages( array(\n\t\t\t'before' => '<div class=\"page-links\">' . __( 'Pages:', 'storefront' ),\n\t\t\t'after'  => '</div>',\n\t\t) );\n\t\t?>\n\t\t</div><!-- .entry-content -->\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_post_meta' ) ) {\n\t/**\n\t * Display the post meta\n\t *\n\t * @since 1.0.0\n\t */\n\tfunction storefront_post_meta() {\n\t\t?>\n\t\t<aside class=\"entry-meta\">\n\t\t\t<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search.\n\n\t\t\t?>\n\t\t\t<div class=\"author\">\n\t\t\t\t<?php\n\t\t\t\t\techo get_avatar( get_the_author_meta( 'ID' ), 128 );\n\t\t\t\t\techo '<div class=\"label\">' . esc_attr( __( 'Written by', 'storefront' ) ) . '</div>';\n\t\t\t\t\tthe_author_posts_link();\n\t\t\t\t?>\n\t\t\t</div>\n\t\t\t<?php\n\t\t\t/* translators: used between list items, there is a space after the comma */\n\t\t\t$categories_list = get_the_category_list( __( ', ', 'storefront' ) );\n\n\t\t\tif ( $categories_list ) : ?>\n\t\t\t\t<div class=\"cat-links\">\n\t\t\t\t\t<?php\n\t\t\t\t\techo '<div class=\"label\">' . esc_attr( __( 'Posted in', 'storefront' ) ) . '</div>';\n\t\t\t\t\techo wp_kses_post( $categories_list );\n\t\t\t\t\t?>\n\t\t\t\t</div>\n\t\t\t<?php endif; // End if categories. ?>\n\n\t\t\t<?php\n\t\t\t/* translators: used between list items, there is a space after the comma */\n\t\t\t$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );\n\n\t\t\tif ( $tags_list ) : ?>\n\t\t\t\t<div class=\"tags-links\">\n\t\t\t\t\t<?php\n\t\t\t\t\techo '<div class=\"label\">' . esc_attr( __( 'Tagged', 'storefront' ) ) . '</div>';\n\t\t\t\t\techo wp_kses_post( $tags_list );\n\t\t\t\t\t?>\n\t\t\t\t</div>\n\t\t\t<?php endif; // End if $tags_list. ?>\n\n\t\t<?php endif; // End if 'post' == get_post_type(). ?>\n\n\t\t\t<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>\n\t\t\t\t<div class=\"comments-link\">\n\t\t\t\t\t<?php echo '<div class=\"label\">' . esc_attr( __( 'Comments', 'storefront' ) ) . '</div>'; ?>\n\t\t\t\t\t<span class=\"comments-link\"><?php comments_popup_link( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) ); ?></span>\n\t\t\t\t</div>\n\t\t\t<?php endif; ?>\n\t\t</aside>\n\t\t<?php\n\t}\n}\n\nif ( ! function_exists( 'storefront_paging_nav' ) ) {\n\t/**\n\t * Display navigation to next/previous set of posts when applicable.\n\t */\n\tfunction storefront_paging_nav() {\n\t\tglobal $wp_query;\n\n\t\t$args = array(\n\t\t\t'type' \t    => 'list',\n\t\t\t'next_text' => _x( 'Next', 'Next post', 'storefront' ),\n\t\t\t'prev_text' => _x( 'Previous', 'Previous post', 'storefront' ),\n\t\t\t);\n\n\t\tthe_posts_pagination( $args );\n\t}\n}\n\nif ( ! function_exists( 'storefront_post_nav' ) ) {\n\t/**\n\t * Display navigation to next/previous post when applicable.\n\t */\n\tfunction storefront_post_nav() {\n\t\t$args = array(\n\t\t\t'next_text' => '%title',\n\t\t\t'prev_text' => '%title',\n\t\t\t);\n\t\tthe_post_navigation( $args );\n\t}\n}\n\nif ( ! function_exists( 'storefront_posted_on' ) ) {\n\t/**\n\t * Prints HTML with meta information for the current post-date/time and author.\n\t */\n\tfunction storefront_posted_on() {\n\t\t$time_string = '<time class=\"entry-date published updated\" datetime=\"%1$s\">%2$s</time>';\n\t\tif ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {\n\t\t\t$time_string = '<time class=\"entry-date published\" datetime=\"%1$s\">%2$s</time> <time class=\"updated\" datetime=\"%3$s\">%4$s</time>';\n\t\t}\n\n\t\t$time_string = sprintf( $time_string,\n\t\t\tesc_attr( get_the_date( 'c' ) ),\n\t\t\tesc_html( get_the_date() ),\n\t\t\tesc_attr( get_the_modified_date( 'c' ) ),\n\t\t\tesc_html( get_the_modified_date() )\n\t\t);\n\n\t\t$posted_on = sprintf(\n\t\t\t_x( 'Posted on %s', 'post date', 'storefront' ),\n\t\t\t'<a href=\"' . esc_url( get_permalink() ) . '\" rel=\"bookmark\">' . $time_string . '</a>'\n\t\t);\n\n\t\techo wp_kses( apply_filters( 'storefront_single_post_posted_on_html', '<span class=\"posted-on\">' . $posted_on . '</span>', $posted_on ), array(\n\t\t\t'span' => array(\n\t\t\t\t'class'  => array(),\n\t\t\t),\n\t\t\t'a'    => array(\n\t\t\t\t'href'  => array(),\n\t\t\t\t'title' => array(),\n\t\t\t\t'rel'   => array(),\n\t\t\t),\n\t\t\t'time' => array(\n\t\t\t\t'datetime' => array(),\n\t\t\t\t'class'    => array(),\n\t\t\t),\n\t\t) );\n\t}\n}\n\nif ( ! function_exists( 'storefront_product_categories' ) ) {\n\t/**\n\t * Display Product Categories\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @since  1.0.0\n\t * @param array $args the product section args.\n\t * @return void\n\t */\n\tfunction storefront_product_categories( $args ) {\n\n\t\tif ( storefront_is_woocommerce_activated() ) {\n\n\t\t\t$args = apply_filters( 'storefront_product_categories_args', array(\n\t\t\t\t'limit' \t\t\t=> 3,\n\t\t\t\t'columns' \t\t\t=> 3,\n\t\t\t\t'child_categories' \t=> 0,\n\t\t\t\t'orderby' \t\t\t=> 'name',\n\t\t\t\t'title'\t\t\t\t=> __( 'Shop by Category', 'storefront' ),\n\t\t\t) );\n\n\t\t\t$shortcode_content = storefront_do_shortcode( 'product_categories', apply_filters( 'storefront_product_categories_shortcode_args', array(\n\t\t\t\t'number'  => intval( $args['limit'] ),\n\t\t\t\t'columns' => intval( $args['columns'] ),\n\t\t\t\t'orderby' => esc_attr( $args['orderby'] ),\n\t\t\t\t'parent'  => esc_attr( $args['child_categories'] ),\n\t\t\t) ) );\n\n\t\t\t/**\n\t\t\t * Only display the section if the shortcode returns product categories\n\t\t\t */\n\t\t\tif ( false !== strpos( $shortcode_content, 'product-category' ) ) {\n\n\t\t\t\techo '<section class=\"storefront-product-section storefront-product-categories\" aria-label=\"' . esc_attr__( 'Product Categories', 'storefront' ) . '\">';\n\n\t\t\t\tdo_action( 'storefront_homepage_before_product_categories' );\n\n\t\t\t\techo '<h2 class=\"section-title\">' . wp_kses_post( $args['title'] ) . '</h2>';\n\n\t\t\t\tdo_action( 'storefront_homepage_after_product_categories_title' );\n\n\t\t\t\techo $shortcode_content;\n\n\t\t\t\tdo_action( 'storefront_homepage_after_product_categories' );\n\n\t\t\t\techo '</section>';\n\n\t\t\t}\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_recent_products' ) ) {\n\t/**\n\t * Display Recent Products\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @since  1.0.0\n\t * @param array $args the product section args.\n\t * @return void\n\t */\n\tfunction storefront_recent_products( $args ) {\n\n\t\tif ( storefront_is_woocommerce_activated() ) {\n\n\t\t\t$args = apply_filters( 'storefront_recent_products_args', array(\n\t\t\t\t'limit' \t\t\t=> 4,\n\t\t\t\t'columns' \t\t\t=> 4,\n\t\t\t\t'title'\t\t\t\t=> __( 'New In', 'storefront' ),\n\t\t\t) );\n\n\t\t\t$shortcode_content = storefront_do_shortcode( 'recent_products', apply_filters( 'storefront_recent_products_shortcode_args', array(\n\t\t\t\t'per_page' => intval( $args['limit'] ),\n\t\t\t\t'columns'  => intval( $args['columns'] ),\n\t\t\t) ) );\n\n\t\t\t/**\n\t\t\t * Only display the section if the shortcode returns products\n\t\t\t */\n\t\t\tif ( false !== strpos( $shortcode_content, 'product' ) ) {\n\n\t\t\t\techo '<section class=\"storefront-product-section storefront-recent-products\" aria-label=\"' . esc_attr__( 'Recent Products', 'storefront' ) . '\">';\n\n\t\t\t\tdo_action( 'storefront_homepage_before_recent_products' );\n\n\t\t\t\techo '<h2 class=\"section-title\">' . wp_kses_post( $args['title'] ) . '</h2>';\n\n\t\t\t\tdo_action( 'storefront_homepage_after_recent_products_title' );\n\n\t\t\t\techo $shortcode_content;\n\n\t\t\t\tdo_action( 'storefront_homepage_after_recent_products' );\n\n\t\t\t\techo '</section>';\n\n\t\t\t}\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_featured_products' ) ) {\n\t/**\n\t * Display Featured Products\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @since  1.0.0\n\t * @param array $args the product section args.\n\t * @return void\n\t */\n\tfunction storefront_featured_products( $args ) {\n\n\t\tif ( storefront_is_woocommerce_activated() ) {\n\n\t\t\t$args = apply_filters( 'storefront_featured_products_args', array(\n\t\t\t\t'limit'   => 4,\n\t\t\t\t'columns' => 4,\n\t\t\t\t'orderby' => 'date',\n\t\t\t\t'order'   => 'desc',\n\t\t\t\t'title'   => __( 'We Recommend', 'storefront' ),\n\t\t\t) );\n\n\t\t\t$shortcode_content = storefront_do_shortcode( 'featured_products', apply_filters( 'storefront_featured_products_shortcode_args', array(\n\t\t\t\t'per_page' => intval( $args['limit'] ),\n\t\t\t\t'columns'  => intval( $args['columns'] ),\n\t\t\t\t'orderby'  => esc_attr( $args['orderby'] ),\n\t\t\t\t'order'    => esc_attr( $args['order'] ),\n\t\t\t) ) );\n\n\t\t\t/**\n\t\t\t * Only display the section if the shortcode returns products\n\t\t\t */\n\t\t\tif ( false !== strpos( $shortcode_content, 'product' ) ) {\n\n\t\t\t\techo '<section class=\"storefront-product-section storefront-featured-products\" aria-label=\"' . esc_attr__( 'Featured Products', 'storefront' ) . '\">';\n\n\t\t\t\tdo_action( 'storefront_homepage_before_featured_products' );\n\n\t\t\t\techo '<h2 class=\"section-title\">' . wp_kses_post( $args['title'] ) . '</h2>';\n\n\t\t\t\tdo_action( 'storefront_homepage_after_featured_products_title' );\n\n\t\t\t\techo $shortcode_content;\n\n\t\t\t\tdo_action( 'storefront_homepage_after_featured_products' );\n\n\t\t\t\techo '</section>';\n\n\t\t\t}\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_popular_products' ) ) {\n\t/**\n\t * Display Popular Products\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @since  1.0.0\n\t * @param array $args the product section args.\n\t * @return void\n\t */\n\tfunction storefront_popular_products( $args ) {\n\n\t\tif ( storefront_is_woocommerce_activated() ) {\n\n\t\t\t$args = apply_filters( 'storefront_popular_products_args', array(\n\t\t\t\t'limit'   => 4,\n\t\t\t\t'columns' => 4,\n\t\t\t\t'title'   => __( 'Fan Favorites', 'storefront' ),\n\t\t\t) );\n\n\t\t\t$shortcode_content = storefront_do_shortcode( 'top_rated_products', apply_filters( 'storefront_popular_products_shortcode_args', array(\n\t\t\t\t'per_page' => intval( $args['limit'] ),\n\t\t\t\t'columns'  => intval( $args['columns'] ),\n\t\t\t) ) );\n\n\t\t\t/**\n\t\t\t * Only display the section if the shortcode returns products\n\t\t\t */\n\t\t\tif ( false !== strpos( $shortcode_content, 'product' ) ) {\n\n\t\t\t\techo '<section class=\"storefront-product-section storefront-popular-products\" aria-label=\"' . esc_attr__( 'Popular Products', 'storefront' ) . '\">';\n\n\t\t\t\tdo_action( 'storefront_homepage_before_popular_products' );\n\n\t\t\t\techo '<h2 class=\"section-title\">' . wp_kses_post( $args['title'] ) . '</h2>';\n\n\t\t\t\tdo_action( 'storefront_homepage_after_popular_products_title' );\n\n\t\t\t\techo $shortcode_content;\n\n\t\t\t\tdo_action( 'storefront_homepage_after_popular_products' );\n\n\t\t\t\techo '</section>';\n\n\t\t\t}\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_on_sale_products' ) ) {\n\t/**\n\t * Display On Sale Products\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @param array $args the product section args.\n\t * @since  1.0.0\n\t * @return void\n\t */\n\tfunction storefront_on_sale_products( $args ) {\n\n\t\tif ( storefront_is_woocommerce_activated() ) {\n\n\t\t\t$args = apply_filters( 'storefront_on_sale_products_args', array(\n\t\t\t\t'limit'   => 4,\n\t\t\t\t'columns' => 4,\n\t\t\t\t'title'   => __( 'On Sale', 'storefront' ),\n\t\t\t) );\n\n\t\t\t$shortcode_content = storefront_do_shortcode( 'sale_products', apply_filters( 'storefront_on_sale_products_shortcode_args', array(\n\t\t\t\t'per_page' => intval( $args['limit'] ),\n\t\t\t\t'columns'  => intval( $args['columns'] ),\n\t\t\t) ) );\n\n\t\t\t/**\n\t\t\t * Only display the section if the shortcode returns products\n\t\t\t */\n\t\t\tif ( false !== strpos( $shortcode_content, 'product' ) ) {\n\n\t\t\t\techo '<section class=\"storefront-product-section storefront-on-sale-products\" aria-label=\"' . esc_attr__( 'On Sale Products', 'storefront' ) . '\">';\n\n\t\t\t\tdo_action( 'storefront_homepage_before_on_sale_products' );\n\n\t\t\t\techo '<h2 class=\"section-title\">' . wp_kses_post( $args['title'] ) . '</h2>';\n\n\t\t\t\tdo_action( 'storefront_homepage_after_on_sale_products_title' );\n\n\t\t\t\techo $shortcode_content;\n\n\t\t\t\tdo_action( 'storefront_homepage_after_on_sale_products' );\n\n\t\t\t\techo '</section>';\n\n\t\t\t}\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_best_selling_products' ) ) {\n\t/**\n\t * Display Best Selling Products\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @since 2.0.0\n\t * @param array $args the product section args.\n\t * @return void\n\t */\n\tfunction storefront_best_selling_products( $args ) {\n\t\tif ( storefront_is_woocommerce_activated() ) {\n\n\t\t\t$args = apply_filters( 'storefront_best_selling_products_args', array(\n\t\t\t\t'limit'   => 4,\n\t\t\t\t'columns' => 4,\n\t\t\t\t'title'\t  => esc_attr__( 'Best Sellers', 'storefront' ),\n\t\t\t) );\n\n\t\t\t$shortcode_content = storefront_do_shortcode( 'best_selling_products', apply_filters( 'storefront_best_selling_products_shortcode_args', array(\n\t\t\t\t'per_page' => intval( $args['limit'] ),\n\t\t\t\t'columns'  => intval( $args['columns'] ),\n\t\t\t) ) );\n\n\t\t\t/**\n\t\t\t * Only display the section if the shortcode returns products\n\t\t\t */\n\t\t\tif ( false !== strpos( $shortcode_content, 'product' ) ) {\n\n\t\t\t\techo '<section class=\"storefront-product-section storefront-best-selling-products\" aria-label=\"' . esc_attr__( 'Best Selling Products', 'storefront' ) . '\">';\n\n\t\t\t\tdo_action( 'storefront_homepage_before_best_selling_products' );\n\n\t\t\t\techo '<h2 class=\"section-title\">' . wp_kses_post( $args['title'] ) . '</h2>';\n\n\t\t\t\tdo_action( 'storefront_homepage_after_best_selling_products_title' );\n\n\t\t\t\techo $shortcode_content;\n\n\t\t\t\tdo_action( 'storefront_homepage_after_best_selling_products' );\n\n\t\t\t\techo '</section>';\n\n\t\t\t}\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_homepage_content' ) ) {\n\t/**\n\t * Display homepage content\n\t * Hooked into the `homepage` action in the homepage template\n\t *\n\t * @since  1.0.0\n\t * @return  void\n\t */\n\tfunction storefront_homepage_content() {\n\t\twhile ( have_posts() ) {\n\t\t\tthe_post();\n\n\t\t\tget_template_part( 'content', 'homepage' );\n\n\t\t} // end of the loop.\n\t}\n}\n\nif ( ! function_exists( 'storefront_social_icons' ) ) {\n\t/**\n\t * Display social icons\n\t * If the subscribe and connect plugin is active, display the icons.\n\t *\n\t * @link http://wordpress.org/plugins/subscribe-and-connect/\n\t * @since 1.0.0\n\t */\n\tfunction storefront_social_icons() {\n\t\tif ( class_exists( 'Subscribe_And_Connect' ) ) {\n\t\t\techo '<div class=\"subscribe-and-connect-connect\">';\n\t\t\tsubscribe_and_connect_connect();\n\t\t\techo '</div>';\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_get_sidebar' ) ) {\n\t/**\n\t * Display storefront sidebar\n\t *\n\t * @uses get_sidebar()\n\t * @since 1.0.0\n\t */\n\tfunction storefront_get_sidebar() {\n\t\tget_sidebar();\n\t}\n}\n\nif ( ! function_exists( 'storefront_post_thumbnail' ) ) {\n\t/**\n\t * Display post thumbnail\n\t *\n\t * @var $size thumbnail size. thumbnail|medium|large|full|$custom\n\t * @uses has_post_thumbnail()\n\t * @uses the_post_thumbnail\n\t * @param string $size the post thumbnail size.\n\t * @since 1.5.0\n\t */\n\tfunction storefront_post_thumbnail( $size = 'full' ) {\n\t\tif ( has_post_thumbnail() ) {\n\t\t\tthe_post_thumbnail( $size );\n\t\t}\n\t}\n}\n\nif ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {\n\t/**\n\t * The primary navigation wrapper\n\t */\n\tfunction storefront_primary_navigation_wrapper() {\n\t\techo '<div class=\"storefront-primary-navigation\">';\n\t}\n}\n\nif ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {\n\t/**\n\t * The primary navigation wrapper close\n\t */\n\tfunction storefront_primary_navigation_wrapper_close() {\n\t\techo '</div>';\n\t}\n}\n",
+			"file": "/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/inc/storefront-template-functions.php",
+			"file_size": 25625,
+			"file_write_time": 131492990440000000,
+			"settings":
+			{
+				"buffer_size": 25627,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 6646 files for \"woocommerce_single_product_summary\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/content-single-product.php:\n   53  \t\t<?php\n   54  \t\t\t/**\n   55: \t\t\t * woocommerce_single_product_summary hook.\n   56  \t\t\t *\n   57  \t\t\t * @hooked woocommerce_template_single_title - 5\n   ..\n   64  \t\t\t * @hooked WC_Structured_Data::generate_product_data() - 60\n   65  \t\t\t */\n   66: \t\t\tdo_action( 'woocommerce_single_product_summary' );\n   67  \t\t?>\n   68  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/content-single-product.php:\n   53  \t\t<?php\n   54  \t\t\t/**\n   55: \t\t\t * woocommerce_single_product_summary hook.\n   56  \t\t\t *\n   57  \t\t\t * @hooked woocommerce_template_single_title - 5\n   ..\n   64  \t\t\t * @hooked WC_Structured_Data::generate_product_data() - 60\n   65  \t\t\t */\n   66: \t\t\tdo_action( 'woocommerce_single_product_summary' );\n   67  \t\t?>\n   68  \n\n4 matches across 2 files\n\n\nSearching 6646 files for \"generate_product_data\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/archive-product.php:\n   77  \t\t\t\t\t\t * woocommerce_shop_loop hook.\n   78  \t\t\t\t\t\t *\n   79: \t\t\t\t\t\t * @hooked WC_Structured_Data::generate_product_data() - 10\n   80  \t\t\t\t\t\t */\n   81  \t\t\t\t\t\tdo_action( 'woocommerce_shop_loop' );\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/content-single-product.php:\n   62  \t\t\t * @hooked woocommerce_template_single_meta - 40\n   63  \t\t\t * @hooked woocommerce_template_single_sharing - 50\n   64: \t\t\t * @hooked WC_Structured_Data::generate_product_data() - 60\n   65  \t\t\t */\n   66  \t\t\tdo_action( 'woocommerce_single_product_summary' );\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/content-single-product.php:\n   62  \t\t\t * @hooked woocommerce_template_single_meta - 40\n   63  \t\t\t * @hooked woocommerce_template_single_sharing - 50\n   64: \t\t\t * @hooked WC_Structured_Data::generate_product_data() - 60\n   65  \t\t\t */\n   66  \t\t\tdo_action( 'woocommerce_single_product_summary' );\n\n3 matches across 3 files\n\n\nSearching 7 files for \"size()\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/inc/storefront-template-functions.php:\n  187  \t\t\t$logo_id = get_theme_mod( 'custom_logo' ); // Check for WP 4.5 Site Logo\n  188  \t\t\t$logo_id = $logo_id ? $logo_id : $logo['id']; // Use WP Core logo if present, otherwise use Jetpack's.\n  189: \t\t\t$size    = site_logo()->theme_size();\n  190  \t\t\t$html    = sprintf( '<a href=\"%1$s\" class=\"site-logo-link\" rel=\"home\" itemprop=\"url\">%2$s</a>',\n  191  \t\t\t\tesc_url( home_url( '/' ) ),\n\n/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1506675640/mapped/var/www/html/client/margaux/wp-content/plugins/woocommerce-products-filter/js/front.js:\n  476      // lets check for empty drop-downs\n  477      jQuery.each(jQuery('.woof_container select'), function (index, select) {\n  478: \tvar size = jQuery(select).find('option').size();\n  479  \tif (size === 0) {\n  480  \t    jQuery(select).parents('.woof_container').remove();\n  ...\n  484      // lets check for empty checkboxes, radio, color conatiners\n  485      jQuery.each(jQuery('ul.woof_list'), function (index, ch) {\n  486: \tvar size = jQuery(ch).find('li').size();\n  487  \tif (size === 0) {\n  488  \t    jQuery(ch).parents('.woof_container').remove();\n  ...\n  754  \n  755  \n  756:     if (jQuery(panel).find('li').size() == 0 || !jQuery('.woof_products_top_panel').length) {\n  757  \tpanel.hide();\n  758      }\n  ...\n  889      if (woof_checkboxes_slide_flag == true) {\n  890  \tvar childs = jQuery('ul.woof_childs_list');\n  891: \tif (childs.size()) {\n  892  \t    jQuery.each(childs, function (index, ul) {\n  893  \n\n5 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 3648,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -613,10 +690,16 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/assets",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/assets/js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/inc"
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/content-single-product.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/page-20.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/modules/mixins.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/js/scripts.js",
@@ -742,19 +825,19 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt/node_modules/lodash/lodash.min.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
 		"/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/wysiwyg.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/page.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/page.php"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 54.0
 	},
 	"find_in_files":
 	{
 		"height": 173.0,
 		"where_history":
 		[
+			"<open files>",
+			""
 		]
 	},
 	"find_state":
@@ -762,6 +845,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"size()",
+			"length",
+			"size()",
+			"create_post_type_html5",
+			"homepage",
+			"generate_product_data",
+			"woocommerce_single_product_summary"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -769,6 +859,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"length",
+			"length()",
+			"lenght()"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -779,8 +872,334 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "content-single-product.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1914,
+								1948
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1662.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "woocommerce/single-product/title.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								786,
+								786
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12981,
+								12981
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3037.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1506675640/mapped/var/www/html/client/margaux/wp-content/plugins/woocommerce-products-filter/js/front.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13493,
+								13499
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"is_remote": true,
+							"local_path": "/var/www/html/client/margaux/wp-content/plugins/woocommerce-products-filter/js/front.js",
+							"remote_loading": false,
+							"synced": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tmp_dir": "/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1506675640/mapped/"
+						},
+						"translation.x": 163.0,
+						"translation.y": 14825.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "woocommerce/single-product/tabs/tabs.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								944,
+								944
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 644.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "front-page.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								160,
+								160
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/inc/storefront-template-functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19468,
+								18496
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 22621.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3648,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										200,
+										234
+									],
+									[
+										425,
+										459
+									],
+									[
+										610,
+										644
+									],
+									[
+										835,
+										869
+									],
+									[
+										1164,
+										1185
+									],
+									[
+										1519,
+										1540
+									],
+									[
+										1869,
+										1890
+									],
+									[
+										2373,
+										2379
+									],
+									[
+										2881,
+										2887
+									],
+									[
+										3167,
+										3173
+									],
+									[
+										3323,
+										3329
+									],
+									[
+										3549,
+										3555
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								2001,
+								2001
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux",
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1836.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -790,7 +1209,7 @@
 	},
 	"input":
 	{
-		"height": 40.0
+		"height": 53.0
 	},
 	"layout":
 	{

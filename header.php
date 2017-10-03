@@ -30,22 +30,34 @@
 		<div class="wrapper">
 
 			<!-- header -->
+			<div class="top-bar">
+				<nav class="container">
+					<?php html5blank_nav('top-menu'); ?>
+				</nav>
+			</div>
+
 			<header class="header clear" role="banner">
 
+				<div class="container">
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 						</a>
 					</div>
 					<!-- /logo -->
 
 					<!-- nav -->
+					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>
+
+						<?php html5blank_nav('social-menu'); ?>
 					</nav>
 					<!-- /nav -->
-
+					<!-- /nav -->
+				</div>
+				
 			</header>
 			<!-- /header -->

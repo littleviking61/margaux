@@ -8,39 +8,34 @@
  * Typography
  */
 
-$font-family-base: Helvetica, Arial, sans-serif;
-$font-family-title: Helvetica, Arial, sans-serif;
+$font-family-base: "Chivo", Helvetica, Arial, sans-serif;
+$font-family-title: "Merriweather", Helvetica, Arial, sans-serif;
 $font-size-base: 1.8em;
 $line-height-base: 1.4;
-
 
 /**
  * Colors
  */
 
-$text-color: black;
+$text-color: #2b2b2b;
 $body-bg: #fff;
 $selection-bg: #04A4CC;
 
-$grey: #9f9f9f;
-$greyExtra: #7d7d7d;
-$lightGrey: #f2f1e9;
-$lighterGrey: #f9f9f9;
+$featured: #5a3682;
+$grey: #959595;
+$lightGrey: #e5e1d6;
+$darkGrey: #aca895;
 $dark: #313131;
 
 /**
  * Grid
  */
 
-$headerHeight: 115px;
+$headerHeight: 90px;
 $headroomHeight: 70px;
 $wrapper-width: 1170px;
 $halfWidth: $wrapper-width /2;
-$headerBackgroundHeight: 370px;
-$homeHeight: 800px;
-$bookingHeight: 80px;
-$slideshowHeight: 550px;
-$mapHeight: 500px;
+$slideshowHeight: 475px;
 
 $padding-horizontal-base: 5px;
 $padding-vertical-base: 5px;

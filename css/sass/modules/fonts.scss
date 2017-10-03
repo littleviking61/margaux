@@ -18,7 +18,9 @@
 }
 */
 
-// @include font-face-bb('Norwester', '../fonts/norwester-webfont', normal);
+@include font-face-bb('Chivo', '../fonts/chivo-regular-webfont', normal);
+@include font-face-bb('Merriweather', '../fonts/merriweather-black-webfont', normal);
+@include font-face-bb('Merriweather', '../fonts/merriweather-blackitalic-webfont', normal, italic);
 
 // @include font-face-bb('Robotoo', '../fonts/RobotoCondensed-Regular-webfont', normal);
 // @include font-face-bb('Robotoo', '../fonts/RobotoCondensed-Italic-webfont', normal, italic);

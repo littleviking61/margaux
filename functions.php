@@ -66,11 +66,18 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 // HTML5 Blank navigation
-function html5blank_nav()
+function html5blank_nav($menu)
 {
+    if(empty($menu)) {
+        $menu = 'header-menu';
+        $class = 'header-menu';
+    }else{
+        $class = $menu;
+    }
+
     wp_nav_menu(
     array(
-        'theme_location'  => 'header-menu',
+        'theme_location'  => $menu,
         'menu'            => '',
         'container'       => 'div',
         'container_class' => 'menu-{menu slug}-container',
@@ -83,7 +90,7 @@ function html5blank_nav()
         'after'           => '',
         'link_before'     => '',
         'link_after'      => '',
-        'items_wrap'      => '<ul>%3$s</ul>',
+        'items_wrap'      => '<ul class="'.$class.'">%3$s</ul>',
         'depth'           => 0,
         'walker'          => ''
         )
@@ -167,8 +174,9 @@ function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'top-menu' => __('Top Menu', 'html5blank'), // Sidebar Navigation
+        'footer-menu' => __('Footer Menu', 'html5blank'), 
+        'social-menu' => __('Social Menu', 'html5blank')
     ));
 }
 
@@ -395,7 +403,7 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+// add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -500,5 +508,31 @@ function my_custom_action() {
     echo '<p>This is my custom action function</p>';
 };     
 add_action( 'woocommerce_single_product_summary', 'my_custom_action', 9 ); 
+
+
+/* ACF */
+
+if( function_exists('acf_add_options_page') ) {
+    // Page principale
+    acf_add_options_page(array(
+        'page_title'    => 'Margaux Déco',
+        'menu_title'    => 'Margaux Déco',
+        'menu_slug'     => 'options-generales',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+  
+  // Première sous-page
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Options',
+        'menu_title'    => 'Options',
+        'parent_slug'   => 'options-generales',
+    ));
+  // Deuxième sous-page
+    
+}
+
+
+/* woocommerce */
 
 add_theme_support('woocommerce');

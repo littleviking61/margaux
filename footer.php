@@ -1,13 +1,47 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org">WordPress</a> &amp; <a href="//html5blank.com">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<div class="container row">
 
+					<div class="detail row">
+						<div class="logo">
+							<a href="<?= home_url(); ?>">
+								<img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+							</a>
+						</div>
+						
+					</div>
+					
+					<div class="vcard">
+						<p class="adr">
+							<?php get_field('adresse_pied_de_page', 'option'); ?>
+						</p>
+					</div>
+
+					<nav class="quick-menu">
+						<?php html5blank_nav('footer-menu'); ?>
+					</nav>
+
+					<div class="horaire">
+						<p>
+							<?php get_field('horaire_douverture', 'option'); ?>
+						</p>
+					</div>
+
+					<div class="social">
+						<nav>
+							<?php html5blank_nav('social-menu'); ?>
+						</nav>
+
+						<!-- copyright -->
+						<p class="copyright">
+							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> -
+							<a href="//wordpress.org">WordPress</a> - <a href="//nuagegraphik.com">Nuagegraphik</a>
+						</p>
+						<!-- /copyright -->
+					</div>
+				</div>
+				
 			</footer>
 			<!-- /footer -->
 
@@ -15,16 +49,6 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
-
-		<!-- analytics -->
-		<script>
-		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-		ga('send', 'pageview');
-		</script>
 
 	</body>
 </html>
