@@ -5,8 +5,8 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?><?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+		<link href="<?= get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+		<link href="<?= get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
 		<link href="https://file.myfontastic.com/hrssS8iZnJT2yGnqZLhU3Y/icons.css" rel="stylesheet">
 
@@ -19,7 +19,7 @@
         // conditionizr.com
         // configure environment tests
         conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
+            assets: '<?= get_template_directory_uri(); ?>',
             tests: {}
         });
         </script>
@@ -57,9 +57,9 @@
 				<div class="container row">
 					<!-- logo -->
 					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
+						<a href="<?= home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+							<img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
 						</a>
 					</div>
 					<!-- /logo -->
