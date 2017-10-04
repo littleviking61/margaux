@@ -6,7 +6,7 @@
 					<div class="detail row">
 						<div class="logo">
 							<a href="<?= home_url(); ?>">
-								<img src="<?= get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+								<img src="<?= get_template_directory_uri(); ?>/img/logo-footer.png" alt="Logo" class="logo-img">
 							</a>
 						</div>
 						

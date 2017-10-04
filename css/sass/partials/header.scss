@@ -10,6 +10,64 @@
 	height: $headerHeight;
 	background-color: white;
 
+	nav{
+		@include flex(1);
+
+		li{
+			@include flexbox();
+			@include align-items(center);	
+		}
+
+		a{
+			padding: 13px $gap/2 $gutter $gap/2;
+			display: inline-block;
+
+			&:after{
+				content: '';
+				width: 100%;
+				height: 2px;
+				background-color: transparent;
+				float: left;
+			}
+
+			&:hover{
+				color: $hover;
+
+				&:after{
+					background-color: $hover;
+				}
+			}
+		}
+	}
+
+	.header-menu{
+		@include flexbox();
+    @include justify-content(space-around);
+    width: 100%;
+	}
+
+	.search{
+		padding-top: $gutter;
+
+		input{
+			display: none;
+		}
+
+		button{
+			cursor: pointer;
+			background-color: transparent;
+			border: none;
+			font-size: 3rem;
+		}
+	}
+}
+
+.logo {
+	width: span(2);
+
+	img{
+		@include object-fit(contain);
+	}
 }
 
 .header, .top-bar{
@@ -40,6 +98,13 @@
 		width: span(1 wide);
 		text-transform: uppercase;
 		text-align: center;
+		background-color: $black;
+
+		@include transition(background-color .3s ease);
+		&:hover{
+			background-color: $hover;
+			color: $black;
+		}
 	}
 
 	.vcard{
@@ -68,10 +133,21 @@
 			}
 		}
 	}
-}
 
-// Logo
-.logo {
+	.post-edit-link{
+	  font-size: 2rem;
+	  padding: 8px;
+	  width: auto;
+
+	  &:hover{
+	    background-color: $black;
+	    color: $hover;
+	  }
+
+	  .home .header:not(.headroom) &{
+	    color: white;
+	  }
+	}
 }
 
 /* headroom */

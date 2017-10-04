@@ -97,6 +97,14 @@ function html5blank_nav($menu)
     );
 }
 
+add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+function add_search_form($items, $args) {
+  if( $args->theme_location == 'header-menu' )
+    $items .= '<li class="search"><form role="search" method="get" id="searchform" action="'.home_url( '/' ).'"><input type="text" value="search" name="s" id="s" /><button type="submit" id="searchsubmit"><i class="maricon-search"></i></form></li>';
+  return $items;
+}
+
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {

@@ -62,21 +62,6 @@
   line-height: $line-height-base;
 }
 
-.post-edit-link{
-  position: absolute;
-  top: 33px;
-  left: 250px;
-  font-size: 2rem;
-
-  &:hover{
-    opacity: 1;
-  }
-
-  .home .header:not(.headroom) &{
-    color: white;
-  }
-}
-
 /* comment */
 
 .comments{

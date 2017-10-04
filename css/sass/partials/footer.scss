@@ -8,8 +8,60 @@
 	width: 100%;
 	height: $footerHeight;
 	background-color: $black;
+	padding-top: $gutterLarge;
+	overflow: hidden;
+	color: $grey;
+	font-size: 1.7rem;
+
+	.container{
+		@include align-items(flex-start);
+	}
 	
-	&, a{
+	a{
 		color: $grey;
+		@include transition(color .3s ease);
+
+		&:hover{
+			color: $hover;
+		}
+	}
+
+
+
+	.detail{
+		width: span(3);
+	}
+
+	.vcard{
+		width: span(3);
+	}
+
+	.footer-menu{
+		width: span(2);
+	}
+
+	.horaire{
+		width: span(2);
+	}
+
+	.social-menu{
+		width: span(2);
+		@include flexbox();
+
+		a{
+			display: inline-block;
+			width: span(1);
+			text-transform: uppercase;
+			text-align: center;
+			margin-left: $gap;
+		}
+
+		li:first-child a{
+			margin-left: 0;
+		}
+	}
+
+	.copyright{
+		display: none;
 	}
 }

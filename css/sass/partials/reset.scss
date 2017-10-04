@@ -46,6 +46,7 @@ a {
 
   &:focus,
   &:hover {
+    color: $hover;
     //text-decoration: underline;
   }
 
