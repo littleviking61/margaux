@@ -6,7 +6,7 @@
 
 $susy: (
   'columns': susy-repeat(12, 70px),
-  'gutters': 30px,
+  'gutters': $gap,
   'spread': 'narrow',
   'container-spread': 'narrow',
 );

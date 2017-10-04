@@ -23,9 +23,50 @@
 	width: 100%;
 	height: $topbarHeight;
 	background-color: $black;
+	font-size: 1.3rem;
+
+	.container{
+		max-height: 100%;
+	}
 	
 	&, a{
 		color: $grey;
+	}
+
+	a{
+		height: $topbarHeight;
+		padding: 13px $gap/2 $gutter $gap/2;
+		display: inline-block;
+		width: span(1 wide);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.vcard{
+		@include flex(1);
+		min-width: span(4);
+		text-align: center;
+		padding: 13px $gutter $gutter;
+	}
+
+	.top-menu{
+		border-right: solid $grey thin;
+		border-left: solid $grey thin;
+	}
+
+	.social-menu{
+		font-size: 1.1rem;
+
+		a{
+			padding-top: $gutter;
+			border-right: solid $grey thin;
+		}
+
+		li:last-child{
+			a{
+				border-right: none;
+			}
+		}
 	}
 }
 
