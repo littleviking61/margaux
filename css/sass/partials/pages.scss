@@ -12,6 +12,7 @@
 		height: $sliderHeight;
 		position: relative;
 		width: 100%;
+		overflow: hidden;
 	}
 	
 	.woocommerce{
@@ -38,5 +39,131 @@
 			}
 		}
 	}
+}
 
+.coup-de-coeur{
+	width: 50%;
+	background-color: $lightGrey;
+	color: $featured;
+	position: relative;
+	padding: $gutter;
+
+	&:before{
+		content: 'e';
+		font-family: $font-icon;
+		height: 80px;
+		width: 80px;
+		background-color: white;
+		color: $featured;
+		position: absolute;
+    border-radius: 80px;
+    text-align: center;
+    font-size: 5.5rem;
+    padding-top: 5px;
+    left: 20px;
+    top: 20px;
+	}
+}
+
+.recent-posts{
+	width: 50%;
+	border: 2px $featured solid;
+	color: $featured;
+	padding: $gutter span(1);
+	@include flexbox();
+	@include flex-direction(column);
+
+	a{
+		display: inline-block;
+		@include flex(1);
+		@include flexbox();
+		@include flex-direction(column);
+		@include align-items(center);
+		@include justify-content(center);
+		color: $featured;
+
+		.thumbnail{
+			width: 100%;
+			height: 200px;
+
+			img{
+				@include object-fit(cover);
+			}
+		}
+
+		.content{
+			padding: $gutter;
+		}
+
+		.button{
+			background-color: $featured;
+		}
+
+		&:hover{
+			color: $hover;
+			.button{
+				background-color: $hover;
+			}
+		}
+	}
+}
+
+.immanquables{
+	background-color: $featured;
+	color: $lightGrey;
+	padding-top: $gap;
+	padding-bottom: $gap;
+	margin-bottom: 40px;
+
+	> .row{
+		@include align-items(center);
+	}
+
+	header{
+		width: span(3);
+		text-align: center;
+		@include flexbox-column();
+		@include justify-content(center);
+	}
+
+	.woocommerce{
+		width: span(9);
+
+		ul.products{
+			@include flexbox();
+		}
+	}
+}
+
+.category-products{
+	width: 50%;
+	border: thin $lightGrey solid;
+	padding: $gutter $gap;
+	position: relative;
+
+	h2{
+		margin-top: 0;
+		text-align: center;
+		color: $lightGrey;
+	}
+
+	h3{
+		margin-bottom: 5px;
+	}
+
+	.product{
+		h2,h3,.price{
+			display: none !important;
+		}
+	}
+
+	> a{
+		position: absolute;
+    right: 30px;
+    bottom: 47px;
+		width: 160px;
+		height: 160px;
+		@include flexbox();
+		@include align-items(center);
+	}
 }

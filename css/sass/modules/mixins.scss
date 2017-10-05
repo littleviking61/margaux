@@ -119,6 +119,7 @@ $retina-suffix: '@2x';
   display: flex;
 }
 
+
 // The 'flex' shorthand
 // - applies to: flex items
 // <positive-number>, initial, auto, or none
@@ -241,4 +242,9 @@ $retina-suffix: '@2x';
      -moz-align-self: $align;
       -ms-align-self: $align;
           align-self: $align;
+}
+
+@mixin flexbox-column() {
+  @include flexbox();
+  @include flex-direction(column);
 }
