@@ -37,9 +37,48 @@
 				}
 			}
 
-			a:hover .price{
-				color: $hover;
+			a{
+				outline: none;
+
+				img{
+					margin:0;
+				}
+
+				.thumbnail{
+					margin-bottom: $gutter;
+					position: relative;
+
+					&:after{
+						background-color: rgba($hover, 0.6);
+						opacity: 0;
+						width: 80%;
+						height: 80%;
+						opacity: 0;
+						content: 'f';
+						font-family: $font-icon;
+						font-size: 12rem;
+						color: white;
+						padding-top: 10px;
+						position: absolute;
+						top: 10%;
+						left: 10%;
+						border-radius: 100%;
+						@include transition(opacity .3s ease);
+					}
+				}
+
+				&:hover{
+					.thumbnail{
+						&:after{
+							opacity: 1;
+						}
+					}
+				}
 			}
+
+			// a:hover .price{
+			// 	color: $hover;
+			// }
 
 			@at-root .coup-de-coeur &{
 				width: auto;

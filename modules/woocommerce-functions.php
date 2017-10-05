@@ -35,4 +35,8 @@ function get_product_main_category($prod_terms, $getId) {
 	}
 }
 
+function woocommerce_template_loop_product_thumbnail() {
+    echo '<div class="thumbnail">'.woocommerce_get_product_thumbnail().'</div>';
+}
+
 ?>
