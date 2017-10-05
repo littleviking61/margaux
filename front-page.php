@@ -45,8 +45,12 @@
 
 			<div class="row">
 				<section class="coup-de-coeur">
-					<h3><?= __('Coup de coeur', 'html5blank') ?></h3>
-					<?= do_shortcode( '[product id="'.get_field('coup_de_coeur').'"]' ) ?>
+					
+					<?php 
+						$content = do_shortcode( '[product id="'.get_field('coup_de_coeur').'"]' ) ;
+						$content = str_replace('<div class="thumbnail"', '<h3 class="title">'. __('Coup de coeur', 'html5blank') .'</h3><div class="thumbnail"',$content);
+						echo $content;
+					?>
 				</section>
 
 				<section class="recent-posts">

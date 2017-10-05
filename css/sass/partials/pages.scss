@@ -43,10 +43,7 @@
 
 .coup-de-coeur{
 	width: 50%;
-	background-color: $lightGrey;
-	color: $featured;
 	position: relative;
-	padding: $gutter;
 
 	&:before{
 		content: 'e';
@@ -67,20 +64,20 @@
 
 .recent-posts{
 	width: 50%;
-	border: 2px $featured solid;
-	color: $featured;
-	padding: $gutter span(1);
-	@include flexbox();
-	@include flex-direction(column);
 
 	a{
-		display: inline-block;
-		@include flex(1);
 		@include flexbox();
 		@include flex-direction(column);
 		@include align-items(center);
 		@include justify-content(center);
+		border: 2px $featured solid;
+		padding: $gutter span(1);
+		display: inline-block;
 		color: $featured;
+
+		h3{
+			text-align: center;
+		}
 
 		.thumbnail{
 			width: 100%;
@@ -100,7 +97,7 @@
 		}
 
 		&:hover{
-			color: $hover;
+			border-color: $hover;
 			.button{
 				background-color: $hover;
 			}
