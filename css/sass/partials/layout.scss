@@ -58,6 +58,10 @@ main{
 	}
 }
 
+main > .container > section, main > .container > .row{
+	margin-bottom: 40px;
+}
+
 article{
 	> section{
 		margin-bottom: $gap;

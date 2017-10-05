@@ -14,18 +14,22 @@
 							<?php while( have_rows('slides') ): the_row(); ?>
 								<li class="slide">
 									<?php $image = get_sub_field('image'); ?>
-									<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( $image, 'medium' )); ?>">
+									<div class="thumbnail">
+										<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( $image, 'large' )); ?>">
+									</div>
 
-									<h3 class="main-cat">Actus</h3>
+									<div class="content">
+										<h3 class="main-cat">Actus</h3>
 
-									<?php $texte = get_sub_field('texte'); ?>
-									<?php if (!empty($texte)): ?>
-										<p><?= get_sub_field('texte') ?></p>
-									<?php else: ?>
-										<p><?= get_the_excerpt(get_sub_field('lien')) ?></p>	
-									<?php endif ?>
-
-									<a href="<?= get_permalink( get_sub_field('lien') )?>"><?= __('Voir +', 'html5blank') ?></a>
+										<?php $texte = get_sub_field('texte'); ?>
+										<?php if (!empty($texte)): ?>
+											<p><?= get_sub_field('texte') ?></p>
+										<?php else: ?>
+											<p><?= get_the_excerpt(get_sub_field('lien')) ?></p>	
+										<?php endif ?>
+										
+										<a class="button" href="<?= get_permalink( get_sub_field('lien') )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
+									</div>
 								</li>
 							<?php endwhile; ?>
 
@@ -36,7 +40,9 @@
 
 				<section class="nouveautes">
 					<h3><?= __('Nouveautés', 'html5blank') ?></h3>
-					<?= do_shortcode( '[recent_products per_page="12" columns="4"]' ) ?>
+					<div class="slider">
+						<?= do_shortcode( '[recent_products per_page="12"]' ) ?>
+					</div>
 				</section>
 
 				<div class="row">

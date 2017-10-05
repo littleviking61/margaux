@@ -11,9 +11,83 @@ a{
 h1, h2, h3, h4{
 }
 
+h2{
+	font-family: $font-family-title;
+}
+
+h3{
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+section{
+	> h3{
+		text-align: center;
+	}
+}
+
 .button{
+	background-color: $lightGrey;
+	padding: 5px $gutter 5px $gutterMedium;
+	color: $dark;
+	@include border-radius(50px);
+	@include transition(background-color .3s ease, color .2s ease);
+
+	&:hover{
+		background-color: $hover;
+		color: $dark;
+	}
 }
 
 .add-to-cart{
 	display: none;
+}
+
+/* elements */
+
+.slideshow{
+	height: $slideshowHeight;
+	position: relative;
+	width: 100%;
+	background-color: $featured;
+	color: $lightGrey;
+
+	.slides{
+		height: 100%;
+	}
+
+	.slide{
+		width: 100%;
+		@include flexbox();
+		@include align-items(center);
+		height: 100%;
+		overflow: hidden;
+
+		& > *{
+			width: 50%;
+			display: inline-block;
+		}
+
+		img{
+			@include object-fit(cover);
+		}
+
+		.content{
+			padding: $gutter;
+			padding: 10px;
+			text-align: center;
+			max-height: 100%;
+
+			p{
+				font-size: 3.4rem;
+				font-family: $font-family-title;
+				padding: $gap;
+			}
+
+			.button{
+				color: $featured;
+			}	
+		}
+
+	}
 }

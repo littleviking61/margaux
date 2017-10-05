@@ -124,6 +124,9 @@ function html5blank_header_scripts()
             // Headeroom
             wp_register_script('headroom', get_template_directory_uri() . '/js/lib/headroom.js', array(), '0.9.4');
 
+             // Slick
+            wp_register_script('slick', get_template_directory_uri() . '/js/lib/slick.min.js', array(), '1.8.0');
+
             // Custom scripts
             wp_register_script(
                'html5blankscripts',
@@ -132,7 +135,8 @@ function html5blank_header_scripts()
                    'conditionizr',
                    'modernizr',
                    'jquery',
-                   'headroom'),
+                   'headroom',
+                   'slick'),
                '1.0.0');
 
             // Enqueue Scripts

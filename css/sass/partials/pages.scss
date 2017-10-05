@@ -2,3 +2,41 @@
  * partials/pages
  * ---
  */
+
+
+/* home */
+
+.nouveautes{
+
+	.slider{
+		height: $sliderHeight;
+		position: relative;
+		width: 100%;
+	}
+	
+	.woocommerce{
+		height: 100%;
+		width: 100%;
+		
+		.products{
+			height: 100%;
+			width: 100%;
+
+			li.product{
+				height: 100%;
+				margin: 0;
+				width: span(2 wide);
+				clear: none;
+				padding: 0 $gap/2;
+
+				a{
+					@include flexbox();
+					@include justify-content(center);
+					@include flex-direction(column);
+					height: 100%;
+				}
+			}
+		}
+	}
+
+}
