@@ -29,6 +29,25 @@
 									<a class="button" href="<?= get_permalink( get_sub_field('lien') )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
 								</div>
 							</li>
+								<li class="slide">
+								<?php $image = get_sub_field('image'); ?>
+								<div class="thumbnail">
+									<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( $image, 'large' )); ?>">
+								</div>
+
+								<div class="content">
+									<h3 class="main-cat">Actus</h3>
+
+									<?php $texte = get_sub_field('texte'); ?>
+									<?php if (!empty($texte)): ?>
+										<p><?= get_sub_field('texte') ?></p>
+									<?php else: ?>
+										<p><?= get_the_excerpt(get_sub_field('lien')) ?></p>	
+									<?php endif ?>
+									
+									<a class="button" href="<?= get_permalink( get_sub_field('lien') )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
+								</div>
+							</li>
 						<?php endwhile; ?>
 
 					</ul>

@@ -4,6 +4,9 @@
 	$(function () {
 		// DOM ready, take it away
 		// 
+		// 
+		// $('.slides','.slideshow').slick();
+
 		$('.products', 'section.nouveautes').slick({
 		  infinite: true,
 		   slidesToShow: 4,
