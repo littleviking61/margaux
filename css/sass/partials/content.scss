@@ -70,10 +70,13 @@ a:hover > span.button{
 
 	.slides{
 		height: 100%;
+		width: $wrapper-width;
+		padding: 0;
 	}
 
 	.slide{
-		width: 100%;
+		width: $wrapper-width;
+
 		@include flexbox();
 		@include align-items(center);
 		height: 100%;

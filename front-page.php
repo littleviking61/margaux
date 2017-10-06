@@ -7,7 +7,7 @@
 			<?php if( have_rows('slides') ): ?>
 
 				<section class="slideshow">
-					<ul class="slides row">
+					<ul class="slides">
 
 						<?php while( have_rows('slides') ): the_row(); ?>
 							<li class="slide">

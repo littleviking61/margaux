@@ -138,6 +138,20 @@
 	padding: $gutter $gap;
 	position: relative;
 
+	&:nth-child(2n){
+		h2{
+			color: $featured;
+		}
+		.button{
+			background-color: $featured;
+
+			&:hover{
+				background-color: $hover;
+			}
+		}
+
+	}
+
 	h2{
 		margin-top: 0;
 		text-align: center;

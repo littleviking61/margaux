@@ -5,7 +5,12 @@
 		// DOM ready, take it away
 		// 
 		// 
-		// $('.slides','.slideshow').slick();
+		$('.slides','.slideshow').slick({
+			 arrows: false,
+			 dots: true,
+			 autoplay: true,
+			 autoplaySpeed: 3000,
+		});
 
 		$('.products', 'section.nouveautes').slick({
 		  infinite: true,

@@ -45,6 +45,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 100%;
 
     &:before,
     &:after {
@@ -75,6 +76,7 @@
     }
 
     display: none;
+    outline: none;
 
     &.dragging img {
         pointer-events: none;
@@ -133,5 +135,45 @@
 
     &.slick-hidden {
         display: none;
+    }
+}
+
+.slick-dots{
+    list-style: disc;
+    font-size: 4rem;
+    list-style-position: inside;
+    @include flexbox();
+    padding: $gutter;
+    line-height: 0.45;
+    position: absolute;
+    right: $gutter;
+    bottom: 5px;
+
+    li{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+
+        &.slick-active{
+            color: darken($featured, 10%);
+        }
+    }
+
+    button{
+        position: absolute;
+        top: 0;
+        left: -4px;
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
     }
 }
