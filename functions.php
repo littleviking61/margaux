@@ -128,7 +128,7 @@ function nav_list_cat_on_page_for_posts( $item_output, $item, $depth, $args ) {
 
 function add_search_form($items, $args) {
   if( $args->theme_location == 'header-menu' )
-    $items .= '<li class="search"><form role="search" method="get" id="searchform" action="'.home_url( '/' ).'"><input type="text" value="search" name="s" id="s" /><button type="submit" id="searchsubmit"><i class="maricon-search"></i></form></li>';
+    $items .= '<li class="search"><form role="search" method="get" id="searchform" action="'.home_url( '/' ).'"><input type="text" placeholder="Search" name="s" id="s" /><span><i class="maricon-close"></i></span><button type="submit" id="searchsubmit"><i class="maricon-search"></i></button></form></li>';
   return $items;
 }
 

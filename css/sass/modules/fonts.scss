@@ -19,6 +19,7 @@
 */
 
 @include font-face-bb('Chivo', '../fonts/chivo-regular-webfont', normal);
+@include font-face-bb('Chivo', '../fonts/chivo-italic-webfont', normal, italic);
 @include font-face-bb('Merriweather', '../fonts/merriweather-black-webfont', normal);
 @include font-face-bb('Merriweather', '../fonts/merriweather-blackitalic-webfont', normal, italic);
 

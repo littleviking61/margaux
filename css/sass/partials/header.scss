@@ -80,18 +80,62 @@
 	}
 
 	.search{
-		padding-top: $gutter;
+		width: 40px;
 
-		input{
-			display: none;
+		form{
+			position: absolute;
+			right: 0;
+			height: $headerHeight;
+			top: 0;
+			padding-bottom: $gutterLarge;
+			padding-top: $gutterLarge;
 		}
 
-		button{
+		input{
+			position: relative;
+			z-index: 2;
+			opacity: 0;
+			border: none;
+			border-left: thin solid;
+			padding-left: $gutterLarge;
+			width: 40px;
+			height: 100%;
+			font-size: 2.2rem;
+			float: right;
+			outline: none;
+			font-family: $font-family-base;
+			font-style: italic;
+	    @include transition(width .3s ease-in-out, opacity .3s  ease-in-out);
+
+	    &:focus {
+				width: span(10);
+				opacity: 1;
+
+				& + span{
+					opacity: 1;
+					z-index: 2;
+				}
+			}
+		}
+
+		button, span{
+			position: absolute;
+			right: 0;
+			top: $gap;
 			cursor: pointer;
 			background-color: transparent;
 			border: none;
 			font-size: 3rem;
+			padding: 2px 2px;
 		}
+
+		span{
+			z-index: -1;
+			opacity: 0;
+			@include transition(opacity .3s  ease-in-out);
+		}
+
+
 	}
 }
 
