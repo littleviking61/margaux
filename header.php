@@ -46,7 +46,6 @@
 
 						<?php html5blank_nav('social-menu'); ?>
 
-
 					</nav>
 				</div>
 

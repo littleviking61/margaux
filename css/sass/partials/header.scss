@@ -9,6 +9,11 @@
 	width: 100%;
 	height: $headerHeight;
 	background-color: white;
+	z-index: 70;
+
+	.container{
+		position: relative;
+	}
 
 	nav{
 		@include flex(1);
@@ -44,6 +49,34 @@
 		@include flexbox();
     @include justify-content(space-around);
     width: 100%;
+
+    .sub-menu{
+    	@include flexbox();
+    	@include justify-content(center);
+    	@include flex-wrap(wrap);
+    	@include transition(max-height .3s ease);
+    	position: absolute;
+    	width: 100%;
+    	top: $headerHeight;
+    	left: 0;
+    	background-color: white;
+			overflow: hidden;
+			max-height: 0px;
+			border-top: thin solid $grey;
+  		padding-left: $gap;
+  		padding-right: $gap;
+
+  		&:before, &:after{
+  			content:'';
+  			width: 100%;
+  			padding-top: $gap;
+  		}
+    }
+
+    .menu-item:hover .sub-menu{
+    	max-height: 400px;
+    	z-index: 2;
+    }
 	}
 
 	.search{

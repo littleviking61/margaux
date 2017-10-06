@@ -100,6 +100,32 @@ function html5blank_nav($menu)
 
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 
+/**
+ * Faire une liste dynamique
+ */
+add_filter( 'walker_nav_menu_start_el', 'nav_list_cat_on_page_for_posts', 10, 4 );
+function nav_list_cat_on_page_for_posts( $item_output, $item, $depth, $args ) {
+    // Si l'ID de la page ciblé par le menu est la home du blog
+    // page_for_posts est autoload : pas de requête en plus :-3
+
+    if($item->object == 'product_cat') {
+        $term_children = get_term_children( $item->object_id, 'product_cat' );
+        if(count($term_children) > 0){
+            $item_output .= '<ul class="sub-menu">';
+            foreach ( $term_children as $child ) {
+                $term = get_term_by( 'id', $child, 'product_cat' );
+                $current = in_array('current-product_cat-ancestor',$item->classes) ? 'current-product-cat' : '';
+                $item_output .= '<li class="'. $current .'"><a
+                    href="' . get_term_link( $child, 'product_cat' ) . '">' . $term->name . '</a></li>';
+            }
+            $item_output .= '</ul>';
+        }
+
+    }
+
+    return $item_output;
+}
+
 function add_search_form($items, $args) {
   if( $args->theme_location == 'header-menu' )
     $items .= '<li class="search"><form role="search" method="get" id="searchform" action="'.home_url( '/' ).'"><input type="text" value="search" name="s" id="s" /><button type="submit" id="searchsubmit"><i class="maricon-search"></i></form></li>';
