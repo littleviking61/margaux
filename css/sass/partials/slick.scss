@@ -103,10 +103,12 @@
 
     .slick-slide{
         margin: 0 $gutter;
-        @include transition(opacity .3s ease);
+        border: 4px solid transparent;
+        @include transition(opacity .3s, border-color .3s);
         opacity: 0.6;
 
         &.slick-center{
+            border-color: $hover;
             opacity: 1;
         }
     }

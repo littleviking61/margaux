@@ -108,7 +108,7 @@
 			font-style: italic;
 	    @include transition(width .3s ease-in-out, opacity .3s  ease-in-out);
 
-	    &:focus {
+	    &:focus{
 				width: span(10);
 				opacity: 1;
 
@@ -141,10 +141,13 @@
 }
 
 .logo {
+	@include background-image('logo');
+	background-size: contain;
 	width: span(2);
 
 	img{
 		@include object-fit(contain);
+		opacity: 0;
 	}
 }
 
