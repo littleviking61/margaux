@@ -14,7 +14,7 @@ h1, h2, h3, h4{
 
 h2{
 	font-family: $font-family-title;
-	font-weight: bold;
+	font-weight: border-left;
 }
 
 h3{
@@ -112,5 +112,29 @@ a:hover > span.button{
 			}	
 		}
 
+	}
+}
+
+.ssba-wrap, .social-buttons{
+	text-align: left;
+	text-transform: uppercase;
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+	ul,li{
+		display: inline-block;
+	}
+	i[class*="icon-"]{
+		display: inline-block;
+		@include border-radius(40px);
+		margin-left: $gutter;
+		text-align: center;
+		padding-top: 10px;
+		width: 40px;
+		height: 40px;
+		color: white;
+		background-color: $lightGrey;
+		font-size: 2rem;
 	}
 }

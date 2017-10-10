@@ -211,3 +211,34 @@
 		}
 	}
 }
+
+/* page 52 contact */
+
+.page-id-52{
+
+	.map{
+		width: span(6);
+		height: $mapHeight;
+	}
+
+	.details{
+		@include flex(1);
+		padding-left: $gap;
+
+		text-align: center;
+
+		dl{
+			text-align: left;
+
+			dt{
+				color: darken($lightGrey, 10%);
+				margin-top: $gap;
+				margin-bottom: $gutter;
+			}
+
+			dd{
+				margin-left: 0;
+			}
+		}
+	}
+}

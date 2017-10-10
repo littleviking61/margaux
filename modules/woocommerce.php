@@ -26,6 +26,9 @@ function woocommerce_template_product_description() {
 }
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_product_description', 20 );
 
+add_action( 'woocommerce_single_product_summary', 'social_share_buttons', 90 );
+
+
 function woocommerce_template_product_additional() {
   woocommerce_get_template( 'single-product/tabs/additional-information.php' );
 }

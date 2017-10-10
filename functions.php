@@ -12,7 +12,12 @@ require_once "modules/woocommerce.php";
     External Modules/Files
 \*------------------------------------*/
 
-// Load any external files you have here
+function my_acf_init() {
+    
+    acf_update_setting('google_api_key', 'AIzaSyBy4r1Y-kZ_4jIulnUNL-K6hXLF95SdrBY');
+}
+
+add_action('acf/init', 'my_acf_init');
 
 /*------------------------------------*\
     Theme Support
@@ -566,5 +571,4 @@ if( function_exists('acf_add_options_page') ) {
 
 
 /* woocommerce */
-
 add_theme_support('woocommerce');
