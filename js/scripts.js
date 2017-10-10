@@ -44,6 +44,14 @@ function initMap(){
 			});
 		}
 
+		$('.gallery ul', 'main').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
+			nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
+		})
+
 		$('.products', 'section.nouveautes').slick({
 		  infinite: true,
 		   slidesToShow: 4,

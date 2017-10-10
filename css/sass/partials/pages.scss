@@ -212,13 +212,48 @@
 	}
 }
 
-/* page 52 contact */
+/* page 52 -54 contact a propo */
 
-.page-id-52{
+.page-id-52, .page-id-54{
 
-	.map{
+	.map, .gallery{
 		width: span(6);
 		height: $mapHeight;
+	}
+
+	.gallery{
+		overflow: hidden;
+		position: relative;
+		ul{
+			@include reset-box-ul();
+			height: 100%;
+
+			li{
+				height: 100%;
+			}
+
+			img{
+				@include object-fit(cover);	
+			}
+		}
+
+		.slick-arrow{
+			position: absolute;
+			top: 50%;
+			margin-top: -20px;
+			left: 0;
+			z-index: 2;
+			width: 60px;
+
+			span{
+				margin: - $gutterLarge $gutter 0;
+			}
+
+			&.next{
+				left: auto;
+				right: 0;
+			}
+		}
 	}
 
 	.details{
