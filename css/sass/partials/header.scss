@@ -35,12 +35,12 @@
 				float: left;
 			}
 
-			&:hover{
-				color: $hover;
+		}
+		a:hover, li.current-menu-item a{
+			color: $hover;
 
-				&:after{
-					background-color: $hover;
-				}
+			&:after{
+				background-color: $hover;
 			}
 		}
 	}
@@ -182,10 +182,11 @@
 		background-color: $black;
 
 		@include transition(background-color .3s ease);
-		&:hover{
-			background-color: $hover;
-			color: $black;
-		}
+	}
+
+	a:hover, li.current-menu-item a{
+		background-color: $hover;
+		color: $black;
 	}
 
 	.vcard{
