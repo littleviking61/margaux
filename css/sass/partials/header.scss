@@ -54,7 +54,7 @@
     	@include flexbox();
     	@include justify-content(center);
     	@include flex-wrap(wrap);
-    	@include transition(max-height .3s ease);
+    	@include transition(max-height .3s ease, border-color .3s ease);
     	position: absolute;
     	width: 100%;
     	top: $headerHeight;
@@ -62,7 +62,7 @@
     	background-color: white;
 			overflow: hidden;
 			max-height: 0px;
-			border-top: thin solid $grey;
+			border-top: thin solid white;
   		padding-left: $gap;
   		padding-right: $gap;
 
@@ -76,6 +76,7 @@
     .menu-item:hover .sub-menu{
     	max-height: 400px;
     	z-index: 2;
+    	border-color: $grey;
     }
 	}
 

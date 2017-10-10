@@ -18,7 +18,7 @@ $susy: (
 	@include flex-direction(column);
 }
 
-.container{
+%container, .container{
 	max-width: $wrapper-width;
 	min-height: 100%;
   padding: 0 $margin-horizontal-large;
@@ -28,7 +28,7 @@ $susy: (
 main{
 	@include flex(1);
 
-	> section:not(.full), > .row:not(.full){
+	> *:not(.full){
 		max-width: $wrapper-width;
 		min-height: 100%;
 	  padding: 0 $margin-horizontal-large;

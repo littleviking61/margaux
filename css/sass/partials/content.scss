@@ -9,10 +9,12 @@ a{
 }
 
 h1, h2, h3, h4{
+	font-weight: normal;
 }
 
 h2{
 	font-family: $font-family-title;
+	font-weight: bold;
 }
 
 h3{

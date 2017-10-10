@@ -98,6 +98,20 @@
     }
 }
 
+.slider-nav{
+    padding: $gutterLarge 0;
+
+    .slick-slide{
+        margin: 0 $gutter;
+        @include transition(opacity .3s ease);
+        opacity: 0.6;
+
+        &.slick-center{
+            opacity: 1;
+        }
+    }
+}
+
 .slick-arrow{
     width: span(1);
     text-align: center;

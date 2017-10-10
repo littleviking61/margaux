@@ -178,3 +178,36 @@
 		@include align-items(center);
 	}
 }
+
+/* single content */
+
+.related-products{
+	background-color: $lighterGrey;
+	padding-top: $gap;
+
+	> .products{
+		@extend %container;
+
+		> h2{
+			font-family: $font-family-base;
+			font-weight: normal;
+			font-size: 2.1rem;
+			text-transform: uppercase;
+			color: $featured;
+			text-align: center;
+			padding-bottom: $gutterLarge;
+		}
+
+		ul.products{
+			margin-bottom: 0;
+			li.product{
+				background-color: white;
+				padding: $gutter;
+
+				.main-cat{
+					display: none;
+				}
+			}
+		}
+	}
+}
