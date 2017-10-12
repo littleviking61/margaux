@@ -66,3 +66,28 @@
 
 .comments{
 }
+
+/* pagination  */
+
+
+.pagination{
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(flex-end);
+  
+  .page-numbers{
+    padding: 0 5px;
+  }
+  .next{
+    padding-top: 5px;
+  }
+  i, .current{
+    color: darken($lightGrey, 10%);
+  }
+}
+
+i.maricon-arrow.prev:before{
+  display: inline-block;
+  @include transform(rotate(180deg));
+}
+

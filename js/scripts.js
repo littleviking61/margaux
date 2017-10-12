@@ -11,6 +11,14 @@ function initMap(){
 		// DOM ready, take it away
 		// 
 		// 
+		// 
+		$('.thumbnail', '.single-post').slick({
+				autoplay: true,
+			 	autoplaySpeed: 3000,
+			 	prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
+			  nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
+		});
+
 		$('.slides','.slideshow').slick({
 			 arrows: false,
 			 dots: true,

@@ -224,6 +224,7 @@
 	.gallery{
 		overflow: hidden;
 		position: relative;
+
 		ul{
 			@include reset-box-ul();
 			height: 100%;
@@ -234,24 +235,6 @@
 
 			img{
 				@include object-fit(cover);	
-			}
-		}
-
-		.slick-arrow{
-			position: absolute;
-			top: 50%;
-			margin-top: -20px;
-			left: 0;
-			z-index: 2;
-			width: 60px;
-
-			span{
-				margin: - $gutterLarge $gutter 0;
-			}
-
-			&.next{
-				left: auto;
-				right: 0;
 			}
 		}
 	}
@@ -274,6 +257,130 @@
 			dd{
 				margin-left: 0;
 			}
+		}
+	}
+}
+
+section.articles{
+	@include flexbox();
+	@include flex-wrap(wrap);
+	padding-top: 0 !important;
+	padding-bottom: 0;
+	margin-bottom: 0;
+
+	article{
+		margin-bottom: $gap;
+
+		&:nth-child(4n+1){
+			margin-right: 0;
+		}
+
+		&:not(.first-actu){
+			width: span(3);
+			height: span(3);
+			overflow: hidden;
+			position: relative;
+
+			.thumbnail{
+				height: 100%;
+				background-color: $lightFeatured;
+			}
+
+			p{
+				display: none;
+			}
+
+			a{
+				height: 100%;
+				width: 100%;
+			}
+
+			.content{
+				background-color: $lightFeatured;
+				padding: $gutterLarge;
+
+				h2{
+					color: $featured;
+					@include ellipsis(112px, 3);
+				}
+				.button{
+					background-color: $featured;
+				}
+			}
+		}
+
+		&.first-actu{
+			width: 100%;
+			margin-bottom: $gap;
+			min-height: 570px;
+
+			a{
+				@include flexbox();
+				height: 100%;
+				width: 100%;
+
+				.thumbnail{
+					width: span(6);
+				}
+
+				.content{
+					@include flex(1);
+					@include flexbox();
+					@include flex-direction(column);
+					@include justify-content(center);
+					border: 2px $featured solid;
+					padding: $gap;
+
+					h2{
+						color: $featured;
+					}
+
+					.button{
+						background-color: $featured;
+					}
+				}
+
+				&:hover{
+					.content{
+						border-color: $hover;
+					}
+					h2{
+						color: $hover;
+					}
+					.button{
+						background-color: $hover,
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+.single-post{
+	.thumbnail{
+		width: 100%;
+		max-height: 570px;
+	}
+
+	.content{
+		padding-top: 60px;
+		width: span(8);
+		margin: 0 auto;
+		@include flexbox-column();
+
+		> *{
+			margin: 0 0 $gap;
+		}
+
+		h2{
+			font-size: 4rem;
+			color: $featured;
+		}
+
+		.ssba-wrap{
+			padding-top: $gutterLarge;
 		}
 	}
 }

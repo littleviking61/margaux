@@ -1,17 +1,18 @@
 <?php get_header(); ?>
 
 	<main role="main" aria-label="Content">
-		<div class="container">
+		
+		<h2 class="page-title"><?= __('Actus', 'html5blank') ?></h2>
+		
+		<section class="articles container row">
 
 			<!-- section -->
-			<section class="row">
-
-				<?php get_template_part('loop'); ?>
-
-			</section>
+			<?php get_template_part('loop'); ?>
 			<!-- /section -->
 
-		</div>
+		</section>
+		<?php get_template_part('pagination'); ?>
+
 	</main>
 
 <?php get_footer(); ?>

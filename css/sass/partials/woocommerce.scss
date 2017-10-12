@@ -22,10 +22,6 @@
 
 				.woocommerce-product-gallery__wrapper{
 					margin: 0;
-
-					&.slider-nav{
-						margin: 0 70px;
-					}
 				}
 			}
 
@@ -42,7 +38,6 @@
 					margin-top: 1em;
 					font-weight: normal;
 					text-transform: uppercase;
-
 				}
 
 				h2{
@@ -190,7 +185,8 @@
 					height: 100%;
 					@include flexbox-column();
 					@include align-items(center);
-					@include justify-content(center);
+					padding-top: 24px;
+					// @include justify-content(center);
 
 					.title{
 						font-size: 2rem;

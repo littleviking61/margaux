@@ -28,6 +28,13 @@ section{
 	}
 }
 
+.thumbnail{
+	overflow: hidden;
+	img{
+		@include object-fit(cover);
+	}
+}
+
 .button{
 	background-color: $lightGrey;
 	border: none;
@@ -118,13 +125,16 @@ a:hover > span.button{
 .ssba-wrap, .social-buttons{
 	text-align: left;
 	text-transform: uppercase;
+
 	ul{
 		list-style: none;
 		padding: 0;
 	}
+
 	ul,li{
 		display: inline-block;
 	}
+
 	i[class*="icon-"]{
 		display: inline-block;
 		@include border-radius(40px);
@@ -134,7 +144,17 @@ a:hover > span.button{
 		width: 40px;
 		height: 40px;
 		color: white;
-		background-color: $lightGrey;
+		background-color: $featured;
 		font-size: 2rem;
+	}
+}
+
+.page-title{
+	@extend %container;
+	text-align: center;
+	font-size: 3.8rem;
+	margin-top: $gap;
+	&, a{
+		color: $featured;
 	}
 }

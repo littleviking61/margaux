@@ -316,7 +316,9 @@ function html5wp_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
+        'total' => $wp_query->max_num_pages,
+        'prev_text'          => __('<i class="maricon-arrow prev"></i>'),
+        'next_text'          => __('<i class="maricon-arrow"></i>'),
     ));
 }
 
@@ -348,6 +350,20 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
     $output = '<p>' . $output . '</p>';
     echo $output;
 }
+
+// Changing excerpt more
+function new_excerpt_more($more) {
+  //global $post;
+  //remove_filter('excerpt_more', 'new_excerpt_more'); 
+  return ' ';
+}
+add_filter('excerpt_more','new_excerpt_more',11);
+
+// function change_excerpt( $text)
+// {
+//     var_dump($text);
+// }
+// add_filter('get_the_excerpt', 'change_excerpt');
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)

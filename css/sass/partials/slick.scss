@@ -115,7 +115,12 @@
 }
 
 .slick-arrow{
-    width: span(1);
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 0;
+    z-index: 2;
+    width: 60px;
     text-align: center;
     background-color: transparent;
     border: none;
@@ -128,7 +133,7 @@
             background-color: $hover;
         }
     }
-
+            
     span{
         content: 'd';
         display: block;
@@ -136,7 +141,7 @@
         text-align: center; 
         height: 40px;
         width: 40px;
-        margin: 0 $gutterMedium; 
+        margin: - $gutterLarge $gutter 0;
         padding: 3px 0 0 3px;
         background-color: $lightGrey;
         border-radius: 40px;
@@ -148,6 +153,11 @@
 
     &.prev span{
        @include transform(rotate(180deg));
+    }
+
+    &.next{
+        left: auto;
+        right: 0;
     }
 
     &.slick-hidden {
