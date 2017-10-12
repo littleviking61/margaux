@@ -19,9 +19,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-}?>
-
-<?php 
+}
 
 if ( ! empty( $breadcrumb ) ) {
 
@@ -46,4 +44,4 @@ if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_after;
 
-} ?>
+}
