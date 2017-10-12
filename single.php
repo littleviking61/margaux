@@ -17,7 +17,7 @@
 					<!-- post thumbnail -->
 					<?php $gallery = get_field('gallery'); ?>
 					<?php if(count($gallery) > 0) : ?>
-						<div class="thumbnail">
+						<div class="thumbnail gallery">
 							<?php foreach( $gallery as $image ): ?>
 	                 <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
 	        		<?php endforeach; ?>

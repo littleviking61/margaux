@@ -12,7 +12,7 @@ function initMap(){
 		// 
 		// 
 		// 
-		$('.thumbnail', '.single-post').slick({
+		$('.thumbnail.gallery', '.single-post').slick({
 				autoplay: true,
 			 	autoplaySpeed: 3000,
 			 	prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
