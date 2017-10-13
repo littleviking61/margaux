@@ -19,8 +19,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
-get_header( 'shop' ); ?>
+global $wp_query;
+get_header(); ?>
 
 	<?php
 		/**
@@ -38,6 +38,19 @@ get_header( 'shop' ); ?>
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+			<?php 
+				$term_children = get_term_children( $wp_query->get_queried_object()->term_id, 'product_cat' );
+				if(count($term_children) > 0){
+			    $item_output .= '<ul class="sub-categories">';
+			    foreach ( $term_children as $child ) {
+			        $term = get_term_by( 'id', $child, 'product_cat' );
+			        $item_output .= '<li><a
+			            href="' . get_term_link( $child, 'product_cat' ) . '">' . $term->name . '</a></li>';
+			    }
+			    $item_output .= '</ul>';
+			    echo $item_output;
+				} 
+			?>
 
 		<?php endif; ?>
 
@@ -48,66 +61,68 @@ get_header( 'shop' ); ?>
 			 * @hooked woocommerce_taxonomy_archive_description - 10
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
-			do_action( 'woocommerce_archive_description' );
+			//do_action( 'woocommerce_archive_description' );
 		?>
 
     </header>
 
-		<?php if ( have_posts() ) : ?>
+		<div class="container row">
+			<?php if ( have_posts() ) : ?>
 
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook.
-				 *
-				 * @hooked wc_print_notices - 10
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
+				<?php
+					/**
+					 * woocommerce_before_shop_loop hook.
+					 *
+					 * @hooked wc_print_notices - 10
+					 * @hooked woocommerce_result_count - 20
+					 * @hooked woocommerce_catalog_ordering - 30
+					 */
+					do_action( 'woocommerce_before_shop_loop' );
+				?>
 
-			<?php woocommerce_product_loop_start(); ?>
+				<?php woocommerce_product_loop_start(); ?>
 
-				<?php woocommerce_product_subcategories(); ?>
+					<?php woocommerce_product_subcategories(); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/**
-						 * woocommerce_shop_loop hook.
-						 *
-						 * @hooked WC_Structured_Data::generate_product_data() - 10
-						 */
-						do_action( 'woocommerce_shop_loop' );
-					?>
+						<?php
+							/**
+							 * woocommerce_shop_loop hook.
+							 *
+							 * @hooked WC_Structured_Data::generate_product_data() - 10
+							 */
+							do_action( 'woocommerce_shop_loop' );
+						?>
 
-					<?php wc_get_template_part( 'content', 'product' ); ?>
+						<?php wc_get_template_part( 'content', 'product' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+					<?php endwhile; // end of the loop. ?>
 
-			<?php woocommerce_product_loop_end(); ?>
+				<?php woocommerce_product_loop_end(); ?>
 
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook.
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
+				<?php
+					/**
+					 * woocommerce_after_shop_loop hook.
+					 *
+					 * @hooked woocommerce_pagination - 10
+					 */
+					do_action( 'woocommerce_after_shop_loop' );
+				?>
 
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+			<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
-			<?php
-				/**
-				 * woocommerce_no_products_found hook.
-				 *
-				 * @hooked wc_no_products_found - 10
-				 */
-				do_action( 'woocommerce_no_products_found' );
-			?>
+				<?php
+					/**
+					 * woocommerce_no_products_found hook.
+					 *
+					 * @hooked wc_no_products_found - 10
+					 */
+					do_action( 'woocommerce_no_products_found' );
+				?>
 
-		<?php endif; ?>
+			<?php endif; ?>
+		</div>
 
 	<?php
 		/**

@@ -58,12 +58,3 @@ function wws_wooremove_prodimg( $html, $post_id ) {
 return get_the_post_thumbnail( $post_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
 }
 add_filter('woocommerce_single_product_image_html', 'wws_wooremove_prodimg', 10, 2);
-
-/* adding share bar */
-function share_for_woocommerce() {
-
-	?>
-    	<div class="social-product-share">Partager sur <i class="icon-facebook"></i><i class="icon-pinterest"></i><?= show_share_buttons() ?></div>
-    	<?php
-}
-// add_action( 'woocommerce_share', 'share_for_woocommerce' );

@@ -3,7 +3,6 @@
  * ---
  */
 
-
 /* home */
 
 .nouveautes{
@@ -180,7 +179,6 @@
 }
 
 /* single content */
-
 .related-products{
 	background-color: $lighterGrey;
 	padding-top: $gap;
@@ -213,7 +211,6 @@
 }
 
 /* page 52 -54 contact a propo */
-
 .page-id-52, .page-id-54{
 
 	.map, .gallery{
@@ -261,6 +258,7 @@
 	}
 }
 
+/* actus */
 section.articles{
 	@include flexbox();
 	@include flex-wrap(wrap);
@@ -357,7 +355,7 @@ section.articles{
 	}
 }
 
-
+/* actu */
 .single-post{
 	.thumbnail{
 		width: 100%;
@@ -382,5 +380,56 @@ section.articles{
 		.ssba-wrap{
 			padding-top: $gutterLarge;
 		}
+	}
+}
+
+/* boutique */
+.prdctfltr-shop{
+
+	main > .row{
+		@include flex-wrap(wrap);
+		@include align-items(stretch);
+	}
+
+	.prdctfltr_woocommerce.pf_default{
+
+		> .prdctfltr_filter_title{
+			background-color: $lightGrey;
+			padding: $gutterLarge;
+			text-align: center;	
+
+			a, span{
+				display: none;
+			}
+		}
+		
+		.prdctfltr_wc, .prdctfltr_filter{
+			width: span(3);
+		}
+		
+		form.prdctfltr_woocommerce_ordering{
+			top: auto;
+			.prdctfltr_filter_inner{
+				@include flexbox-column();
+
+				.prdctfltr_filter{
+					padding-left: 0;
+					margin-bottom: $gap;
+				}
+			}
+		}
+
+		.prdctfltr_filter{
+			@include flexbox-column();
+		}
+	}
+
+	ul.products{
+		@include flex(1);
+	}
+
+	.woocommerce-pagination, .prdctfltr-pagination{
+		width: 100%;
+		text-align: right;
 	}
 }
