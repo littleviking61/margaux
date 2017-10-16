@@ -22,6 +22,14 @@
 
 				.woocommerce-product-gallery__wrapper{
 					margin: 0;
+
+					&:first-child{
+						height: 570px;
+						width: 570px;
+						display: block;
+						overflow: hidden;
+						position: relative;
+					}
 				}
 			}
 
@@ -259,6 +267,7 @@
 		margin-bottom: $gutterLarge;
 		padding-top: $gutterLarge;
 		font-style: italic;
+		font-weight: 100;
 
 		&, a{
 			color: $grey;
@@ -279,6 +288,23 @@
 	.cart{
 		display: none;
 	}
+}
+
+.woocommerce-products-header{
+		font-family: $font-family-title;
+
+		.sub-categories{
+			font-family: $font-family-base;
+			@include reset-box-ul();
+			@include flexbox();
+			@include align-items(center);
+			@include justify-content(center);
+
+			li:not(:last-child):after{
+				content: "-";
+				padding: 0	8px;
+			}
+		}
 }
 
 .prdctfltr_wc{

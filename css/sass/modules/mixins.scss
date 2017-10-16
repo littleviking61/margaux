@@ -87,11 +87,11 @@
 @mixin font-face-bb($font-family, $file-path, $weight: normal, $style: normal, $svg-name: $font-family ) {
   @font-face {
       font-family: $font-family;
-      src: url('#{$file-path}.eot');
-      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-           url('#{$file-path}.woff') format('woff'),
-           url('#{$file-path}.ttf') format('truetype'),
-           url('#{$file-path}.svg##{$svg-name}') format('svg');
+      src: url('#{$file-path}.woff');
+      // src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+      //      url('#{$file-path}.woff') format('woff'),
+      //      url('#{$file-path}.ttf') format('truetype'),
+      //      url('#{$file-path}.svg##{$svg-name}') format('svg');
       font-weight: $weight;
       font-style: $style;
   }

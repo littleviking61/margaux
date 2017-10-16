@@ -28,12 +28,18 @@ function initMap(){
 
 		var gallery = $('.woocommerce-product-gallery');
 		if (gallery.length > 0) {
-			$('figure', gallery)
-				.addClass('slider-for')
-				.clone()
-				.appendTo(gallery)
-				.addClass('slider-nav')
-				.removeClass('slider-for');
+
+			// ajoute la class pour le slider
+			$('figure', gallery).addClass('slider-for')
+			// if more than one picture add nav picture
+			if($('figure > div', gallery).length > 1){
+		
+				$('figure', gallery)
+					.clone()
+					.appendTo(gallery)
+					.addClass('slider-nav')
+					.removeClass('slider-for');
+			}
 
 			$('.slider-for').slick({
 			  slidesToShow: 1,
@@ -42,6 +48,7 @@ function initMap(){
 			  prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
 			  nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
 			});
+			
 			$('.slider-nav').slick({
 			  arrows: false,
 			  slidesToShow: 3,

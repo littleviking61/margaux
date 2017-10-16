@@ -297,11 +297,18 @@ section.articles{
 				background-color: $lightFeatured;
 				padding: $gutterLarge;
 
+				.time{
+					font-size: 14rem;
+				}
+
 				h2{
+					margin-top: $gutter;
 					color: $featured;
 					@include ellipsis(112px, 3);
 				}
+
 				.button{
+					zoom: 0.8;
 					background-color: $featured;
 				}
 			}
@@ -325,7 +332,7 @@ section.articles{
 					@include flex(1);
 					@include flexbox();
 					@include flex-direction(column);
-					@include justify-content(center);
+					// @include justify-content(center);
 					border: 2px $featured solid;
 					padding: $gap;
 
@@ -391,16 +398,29 @@ section.articles{
 		@include align-items(stretch);
 	}
 
+
 	.prdctfltr_woocommerce.pf_default{
 
 		> .prdctfltr_filter_title{
 			background-color: $lightGrey;
-			padding: $gutterLarge;
+			padding: $gutterMedium;
+			color: $featured;
 			text-align: center;	
+			font-style: italic;
 
 			a, span{
 				display: none;
 			}
+		}
+
+		.prdctfltr_collector_flat{
+			padding: 0 !important;
+		}
+
+		.prdctfltr_filter:not(.prdctfltr_terms_customized_select) > .prdctfltr_regular_title{
+			padding: $gutterLarge 0;
+			border-top: thin solid $lightGrey;
+			text-transform: uppercase;
 		}
 		
 		.prdctfltr_wc, .prdctfltr_filter{
@@ -409,12 +429,29 @@ section.articles{
 		
 		form.prdctfltr_woocommerce_ordering{
 			top: auto;
+			@include flexbox-column();
+
 			.prdctfltr_filter_inner{
 				@include flexbox-column();
 
 				.prdctfltr_filter{
 					padding-left: 0;
 					margin-bottom: $gap;
+				}
+			}
+
+			.prdctfltr_buttons{
+				@include order(2);
+
+				.prdctfltr_reset{
+					display: block;
+					padding: 5px 10px;
+					border: thin solid $lightGrey;
+					text-align: center;
+
+					label{
+						margin: 0 !important;
+					}
 				}
 			}
 		}
@@ -431,5 +468,17 @@ section.articles{
 	.woocommerce-pagination, .prdctfltr-pagination{
 		width: 100%;
 		text-align: right;
+	}
+
+
+	.pf_rngstyle_flat .irs-bar, .pf_rngstyle_flat .irs-bar-edge, .pf_rngstyle_flat .irs-line-left, .pf_rngstyle_flat .irs-line-mid, .pf_rngstyle_flat .irs-line-right, .pf_rngstyle_flat .irs-slider{
+		background-image: url(../img/sprite.png);
+	}
+
+	.pf_rngstyle_flat .irs-from, .pf_rngstyle_flat .irs-single, .pf_rngstyle_flat .irs-to{
+		background: $featured;
+	}
+	.pf_rngstyle_flat .irs-from:after, .pf_rngstyle_flat .irs-single:after, .pf_rngstyle_flat .irs-to:after{
+		border-top-color: $featured;
 	}
 }

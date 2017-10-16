@@ -36,7 +36,7 @@
 			}
 
 		}
-		a:hover, li.current-menu-item a, li.current_page_parent a{
+		a:hover, li.current-menu-item > a, li.current_page_parent > a, li.current-product_cat-ancestor > a{
 			color: $hover;
 
 			&:after{
@@ -54,7 +54,7 @@
     	@include flexbox();
     	@include justify-content(center);
     	@include flex-wrap(wrap);
-    	@include transition(max-height .3s ease, border-color .3s ease);
+    	@include transition(max-height .4s ease-in-out);
     	position: absolute;
     	width: 100%;
     	top: $headerHeight;
@@ -62,7 +62,6 @@
     	background-color: white;
 			overflow: hidden;
 			max-height: 0px;
-			border-top: thin solid white;
   		padding-left: $gap;
   		padding-right: $gap;
 
@@ -71,10 +70,14 @@
   			width: 100%;
   			padding-top: $gap;
   		}
+
+  		&:before{
+  			border-top: thin solid $grey;
+  		}
     }
 
     .menu-item:hover .sub-menu{
-    	max-height: 400px;
+    	max-height: 200px;
     	z-index: 2;
     	border-color: $grey;
     }
