@@ -33,6 +33,7 @@
 			<!-- header -->
 			<div class="top-bar">
 				<div class="container row">
+
 					<?php edit_post_link('<i class="icon-edit"></i>'); ?>
 					
 					<div class="vcard">
@@ -48,12 +49,44 @@
 
 					</nav>
 				</div>
+			</div>
 
+			<div class="search-bar">
+				<form role="search" method="get" id="searchform" action="<?= home_url( '/' ) ?>">
+    			<input type="text" placeholder="Search" name="s" id="s" />
+    			<button type="submit" id="searchsubmit"><i class="maricon-arrow"></i></button>
+    		</form>
 			</div>
 
 			<header class="header clear" role="banner">
 
 				<div class="container row">
+
+					<nav class="show-on-mobile switch">
+						<ul>
+					    <li>
+                <a href="#switch">
+                  <span class="open">
+                  	<i class="maricon-navicon"></i>
+                  </span>
+						    	<span class="close">
+						    		<i class="maricon-close"></i>
+						    	</span>
+                </a>
+					    </li>
+				    	<li>
+				    		<a href="#search">
+				    			<span class="open">
+                  	<i class="maricon-search"></i>
+                  </span>
+						    	<span class="close">
+						    		<i class="maricon-close"></i>
+						    	</span>
+				    		</a>
+              </li>
+						</ul>
+					</nav>
+
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?= home_url(); ?>">
@@ -68,6 +101,18 @@
 						<?php html5blank_nav(); ?>
 					</nav>
 					<!-- /nav -->
+
+					<nav class="show-on-mobile admin">
+						<ul>
+						    <li>
+						    	<a href="/mon-compte"><i class="maricon-account"></i></a>
+						    </li>
+						    <li>
+						    	<a href="/panier"><i class="maricon-panier"></i></a>
+                </li>
+						</ul>
+					</nav>
+
 				</div>
 
 			</header>

@@ -107,8 +107,7 @@
 .immanquables{
 	background-color: $featured;
 	color: $lightGrey;
-	padding-top: $gap;
-	padding-bottom: $gap;
+	padding: $gap $gutter;
 	margin-bottom: 40px;
 
 	> .row{
@@ -116,14 +115,14 @@
 	}
 
 	header{
-		width: span(3);
+		width: 30%;
 		text-align: center;
 		@include flexbox-column();
 		@include justify-content(center);
 	}
 
 	.woocommerce{
-		width: span(9);
+		width: 70%;
 
 		ul.products{
 			@include flexbox();

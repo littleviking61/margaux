@@ -77,10 +77,11 @@
 
 // eddicon mixin
 @mixin icon($value){
-  font-family: 'edd-hostel';
-  font-size: 2rem;
+  font-family: margaux-font;
+  font-size: 2em;
   content: $value;
   display: inline-block;
+  text-transform: initial;
 }
 
 // Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss

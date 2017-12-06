@@ -58,3 +58,11 @@ function wws_wooremove_prodimg( $html, $post_id ) {
 return get_the_post_thumbnail( $post_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
 }
 add_filter('woocommerce_single_product_image_html', 'wws_wooremove_prodimg', 10, 2);
+
+add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
+function your_custom_menu_item ( $items, $args ) {
+    if ( $args->theme_location == 'top-menu') {
+        $items .= '<li class="panier"> '.do_shortcode( '[cart_button icon="panier" show_items="true"]').'</li>';
+    }
+    return $items;
+}

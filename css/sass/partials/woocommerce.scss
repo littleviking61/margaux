@@ -7,7 +7,19 @@
 	.single-product{
 
 		div.product{
+
 			@include flexbox();
+
+			button.button{
+				@include border-radius($gap);
+			}
+
+			form.cart{
+				@include flexbox();
+				.quantity input{
+					height: 100%;
+				}
+			}
 
 			p.price, span.price{
 				color: $dark;
@@ -22,6 +34,7 @@
 
 				.woocommerce-product-gallery__wrapper{
 					margin: 0;
+					margin-top: $gutter;
 
 					&:first-child{
 						height: 570px;
@@ -61,6 +74,7 @@
 		.product_title{
 			font-family: $font-family-title;
 			color: darken($lightGrey, 10%);
+			text-align: left;
 		}
 
 		.shop_attributes{
@@ -281,11 +295,77 @@
 	
 	/* add-to-cart hide */
 	span.onsale{
-		display: none;
+		 display: none;
 		// background-color: $hover;
 	}
 
 	.cart{
+		// display: none;
+	}
+}
+
+.woocommerce-account {
+	.woocommerce{
+		@include flexbox();
+
+		.woocommerce-MyAccount-content{
+			@include flex(1);
+			padding: $gap;
+			border-top: thin solid $grey;
+
+			a{
+				color: $featured;
+				text-decoration: underline;
+				&:hover{
+					color: $hover;	
+				}
+			}
+		}	
+
+		.woocommerce-MyAccount-navigation{
+			background-color: $lighterGrey;
+			width: span(3);
+			margin-right: $gap;
+
+			li{
+				padding: 0 $gutterLarge;
+				&.is-active{
+					padding: 0;
+
+					a{
+						border: solid thin $featured;
+						border-left-width: $gutter;
+						background-color: white;
+						padding-left: $gap;
+					}
+				}
+			}
+				
+			a{
+				display: block;
+				width: 100%;
+				padding: $gutter $gutterLarge;
+				color: $featured;
+				border-bottom: thin solid $grey;
+			
+			}
+		}
+
+	}
+
+	main{
+		@include flexbox();
+		> section{
+			@include flex(1);
+			@include flexbox-column();
+
+			> article{
+				@include flex(1);
+			}
+		}
+	}
+	
+	.ssba-wrap{
 		display: none;
 	}
 }
@@ -309,6 +389,7 @@
 
 .prdctfltr_wc{
 	width: span(3);
+	overflow-x: hidden;
 }
 
 // .prdctfltr-shop{

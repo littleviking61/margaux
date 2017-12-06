@@ -12,9 +12,16 @@ h1, h2, h3, h4{
 	font-weight: normal;
 }
 
+h1{
+	font-weight: bold;
+	text-align: center;
+	font-family: $font-family-title;
+	color: $featured;
+}
+
 h2{
 	font-family: $font-family-title;
-	font-weight: border-left;
+	//font-weight: border-left;
 }
 
 h3{
@@ -80,7 +87,7 @@ a:hover > span.button{
 
 	.slides{
 		height: 100%;
-		width: $wrapper-width;
+		width: 100%;
 		padding: 0;
 		margin: 0;
 	}

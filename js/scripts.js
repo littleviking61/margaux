@@ -10,6 +10,18 @@ function initMap(){
 	$(function () {
 		// DOM ready, take it away
 		// 
+		$(document).on( 'click', '.switch a[href="#switch"]', function(e){
+			e.preventDefault();
+			$(this).toggleClass('active');
+			$('.header, body').toggleClass('active');
+		});
+
+		$(document).on( 'click', '.switch a[href="#search"]', function(e){
+			e.preventDefault();
+			$(this).toggleClass('active');
+			$('div.search-bar input').focus();
+			$('div.search-bar').toggleClass('active');
+		});
 		// 
 		// 
 		$('.thumbnail.gallery', '.single-post').slick({
