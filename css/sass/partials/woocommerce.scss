@@ -1,7 +1,7 @@
 /* woocommerce */
 
 .woocommerce{
-	height: 100%;
+	// height: 100%;
 	
 	/* single product page */
 	.single-product{
@@ -112,6 +112,21 @@
 	ul.products{
 		text-align: center;
 		height: 100%;
+		
+		// &:after{
+		// 	clear: unset;
+	 //    float: left;
+	 //    margin: 0 3.8% 2.992em 0;
+	 //    padding: 0;
+	 //    position: relative;
+	 //    width: 30.75%;
+	 //    margin-left: 0;
+	 //    display: list-item;
+	 //    margin-right: 0;
+	 //    @include icon('b');
+	 //    background-color: #5a3682;
+	 //    border-radius: 50px;
+	 //  }
 
 		li.product{
 			text-align: center;
@@ -151,6 +166,8 @@
 				.thumbnail{
 					margin-bottom: $gutter;
 					position: relative;
+					max-width: 300px;
+					align-self: center;
 
 					&:after{
 						background-color: rgba($hover, 0.6);

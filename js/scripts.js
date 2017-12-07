@@ -12,12 +12,17 @@ function initMap(){
 		// 
 		$(document).on( 'click', '.switch a[href="#switch"]', function(e){
 			e.preventDefault();
+			$('.switch a[href="#search"]').removeClass('active');
+			$('div.search-bar').removeClass('active');
 			$(this).toggleClass('active');
 			$('.header, body').toggleClass('active');
 		});
 
 		$(document).on( 'click', '.switch a[href="#search"]', function(e){
 			e.preventDefault();
+			$('.switch a[href="#switch"]').removeClass('active');
+			$('.header, body').removeClass('active');
+
 			$(this).toggleClass('active');
 			$('div.search-bar input').focus();
 			$('div.search-bar').toggleClass('active');
@@ -36,6 +41,17 @@ function initMap(){
 			 dots: true,
 			 autoplay: true,
 			 autoplaySpeed: 3000,
+			 slidesToShow: 1,
+		   slidesToScroll: 1,
+			 responsive: [
+		    {
+		      breakpoint: 950,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		      }
+		    }
+		   ]
 		});
 
 		var gallery = $('.woocommerce-product-gallery');
@@ -85,6 +101,24 @@ function initMap(){
 		   slidesToScroll: 4,
 		   prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
 		   nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
+		   slidesToShow: 4,
+		   slidesToScroll: 4,
+			 responsive: [
+		    {
+		      breakpoint: 950,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3,
+		      }
+		    },
+		    {
+		      breakpoint: 675,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    },
+		   ]
 		});
 
 		// google map

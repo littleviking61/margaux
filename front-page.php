@@ -113,10 +113,13 @@
 						<section class="category-products">
 							<h3><?= get_product_main_category(array($cat->term_id)) ?></h3>
 							<h2><?= $cat->name ?></h2>
-							<?= do_shortcode( '[product_category per_page="5" columns="3" category="'.$cat->slug.'"]' ) ?>
+							<?= do_shortcode( '[product_category per_page="6" columns="3" category="'.$cat->slug.'"]' ) ?>
 
 							<a href="<?= get_category_link($cat->term_id) ?>">
-								<span class="button big"><i class="maricon-plus"></i></span>
+								<img src="<?= get_template_directory_uri(); ?>/img/carre.png" alt="">
+								<span class="button big">
+									<i class="maricon-plus"></i>
+								</span>
 							</a>
 						</section>
 

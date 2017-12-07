@@ -62,7 +62,8 @@ add_filter('woocommerce_single_product_image_html', 'wws_wooremove_prodimg', 10,
 add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 10, 2 );
 function your_custom_menu_item ( $items, $args ) {
     if ( $args->theme_location == 'top-menu') {
-        $items .= '<li class="panier"> '.do_shortcode( '[cart_button icon="panier" show_items="true"]').'</li>';
+    		$active = get_the_ID() == 5 ? ' current-menu-item' : '';
+        $items .= '<li class="panier'. $active .'"> '.do_shortcode( '[cart_button icon="panier" show_items="true"]').'</li>';
     }
     return $items;
 }

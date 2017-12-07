@@ -4,11 +4,13 @@
 // media querie
 // 
 $screen: "only screen";
+$break-extra-small: 440px;
 $break-small: 675px;
 $break-medium: 950px;
 $break-large: 1170px;
 // $break-extra-large: 930rem;
 
+$extra-small-down: "#{$screen} and (max-width: #{$break-extra-small})";
 $small-down: "#{$screen} and (max-width: #{$break-small})";
 $medium-down: "#{$screen} and (max-width: #{$break-medium})";
 $medium-up: "#{$screen} and (min-width: #{$break-medium})";
@@ -34,6 +36,32 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			padding: 8px 10px 5px 10px
 		}
 	}	
+
+	.top-bar{
+		.vcard{
+			margin-right: $gutter;
+			min-width: auto;
+		}
+
+		.account, .panier{
+			width: 55px;
+			overflow: hidden;
+			a{
+				color: transparent;
+				&:before{ color: white; }
+			}
+			&.current-menu-item a{
+				color: transparent;
+				&:before{ color: $black; }
+			}
+		}
+
+		.social-menu{
+			a{
+				width: auto;
+			}
+		}
+	}
 
 	.footer{
 		.detail{
@@ -68,8 +96,9 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 	}
 }
 
-// en dessous de 660
+// en dessous de 950
 @media #{$medium-down}{
+
 	.show-on-mobile{
 		display: initial;
 	}
@@ -185,11 +214,100 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 		}
 	}
 
+	.footer{
+		height: auto;
+
+		.container{
+			@include flex-wrap(wrap);
+
+			> *{
+				width: 50%;
+				margin-right: 0;
+				@include flexbox();
+				@include justify-content(center);
+			}
+		}
+		.detail{
+			@include order(1);
+		}
+		.social{
+			@include order(2);
+			padding-top: $gutterLarge;
+		}
+		.vcard{
+			@include order(3);
+		}
+		.horaire{
+			@include order(4);
+		}
+		.quick-menu{
+			display: none;
+		}
+	}
+
 	.top-bar{
 		display: none;
 	}
+
+	.slideshow{
+		height: 600px;
+
+		.slide{
+			@include flex-direction(column);
+			
+			> *{
+				width: 100%;
+			}
+			
+			.content{
+				> *{
+					margin: $gutter;
+				}
+
+				p{
+					padding: 20px;
+					font-size: 2rem;
+				}
+			}
+		}
+
+	}
+
+	/* home page */
+	.nouveautes + .row, .immanquables + .row{
+		@include flex-wrap(wrap);
+		> *{
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: $gutter;
+		}
+	}
+
+	.coup-de-coeur, .recent-posts{
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.immanquables{
+		.container{
+			@include flex-direction(column);
+		}
+
+		.woocommerce{
+			width: 100%;
+			padding: 0 $gutter;
+		}
+
+		header{
+			width: 100%;
+			h2, p{
+				display: none;
+			}
+		}
+	}
 }
 
+// en dessous de 675
 @media #{$small-down}{
 
 	.header{
@@ -197,6 +315,25 @@ $large-down: "#{$screen} and (max-width: #{$break-large})";
 			li{
 				font-size: 3rem;
 			}
+		}
+	}
+}
+
+// en dessous de 440
+@media #{$extra-small-down}{
+	.header nav{
+		padding: 0;
+		li {
+			width: 40px;
+  	}
+  	a{
+	    padding: 5px 7px 2px 7px;
+  	}
+  }
+
+	.footer{
+		.vcard,.horaire{
+			font-size: 1.4rem;
 		}
 	}
 }

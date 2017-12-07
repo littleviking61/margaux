@@ -104,10 +104,10 @@
 
 					<nav class="show-on-mobile admin">
 						<ul>
-						    <li>
+						    <li class="<?= get_the_ID() == 7 ? ' current-menu-item' : ''; ?>">
 						    	<a href="/mon-compte"><i class="maricon-account"></i></a>
 						    </li>
-						    <li>
+						    <li class="<?= get_the_ID() == 5 ? ' current-menu-item' : ''; ?>">
 						    	<a href="/panier"><i class="maricon-panier"></i></a>
                 </li>
 						</ul>
