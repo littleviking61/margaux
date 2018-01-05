@@ -4,8 +4,104 @@
 		"selected_items":
 		[
 			[
+				"inl",
+				"initial"
+			],
+			[
+				"produc",
+				"products"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
 				"pad",
+				"padding"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"gutter",
+				"gutterLarge"
+			],
+			[
+				"flex",
+				"flex-wrap"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"get_the",
+				"get_the_ID"
+			],
+			[
+				"social",
+				"social-menu"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"top",
+				"top-bar"
+			],
+			[
+				"flex-",
+				"flex-wrap"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"gu",
+				"gutterLarge"
+			],
+			[
+				"produ",
+				"products"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"sear",
+				"search-bar"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"header",
+				"header-menu"
+			],
+			[
+				"paddin",
 				"padding-left"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"white",
+				"white-space"
 			],
 			[
 				"guter",
@@ -16,20 +112,12 @@
 				"gutterLarge"
 			],
 			[
-				"mar",
-				"margin-right"
-			],
-			[
 				"fle",
 				"flexbox"
 			],
 			[
 				"text-dec",
 				"text-decoration-line"
-			],
-			[
-				"flex",
-				"flexbox-column"
 			],
 			[
 				"text",
@@ -68,24 +156,12 @@
 				"clear"
 			],
 			[
-				"font",
-				"font-style"
-			],
-			[
 				"tran",
 				"transparent"
 			],
 			[
 				"z",
 				"z-index"
-			],
-			[
-				"paddin",
-				"padding-top"
-			],
-			[
-				"header",
-				"headerHeight"
 			],
 			[
 				"backgr",
@@ -120,16 +196,8 @@
 				"none"
 			],
 			[
-				"padd",
-				"padding-top"
-			],
-			[
 				"with",
 				"width"
-			],
-			[
-				"get_the",
-				"get_the_excerpt"
 			],
 			[
 				"get_the_ti",
@@ -146,10 +214,6 @@
 			[
 				"incl",
 				"include\t@include"
-			],
-			[
-				"min",
-				"min-height"
 			],
 			[
 				"inline",
@@ -182,10 +246,6 @@
 			[
 				"marn",
 				"margin-bottom"
-			],
-			[
-				"hea",
-				"headroom"
 			],
 			[
 				"BACK",
@@ -234,18 +294,6 @@
 			[
 				"ipo",
 				"important"
-			],
-			[
-				"max",
-				"max-height"
-			],
-			[
-				"bord",
-				"border-top"
-			],
-			[
-				"gutter",
-				"gutterLarge"
 			],
 			[
 				"li",
@@ -334,10 +382,6 @@
 			[
 				"html",
 				"html5blank"
-			],
-			[
-				"marg",
-				"margin-left"
 			],
 			[
 				"get_template",
@@ -448,10 +492,6 @@
 				"$thumbnail〔variable〕"
 			],
 			[
-				"gu",
-				"gutter"
-			],
-			[
 				"no",
 				"nowrap"
 			],
@@ -464,10 +504,6 @@
 				"rgba\trgba()"
 			],
 			[
-				"tra",
-				"transparent"
-			],
-			[
 				"rb",
 				"rgba\trgba()"
 			],
@@ -478,42 +514,6 @@
 			[
 				"list-",
 				"list-basic"
-			],
-			[
-				"ce",
-				"center"
-			],
-			[
-				"vide",
-				"video_a_lhonneur"
-			],
-			[
-				"bodcolo",
-				"border-bottom-color"
-			],
-			[
-				"fon",
-				"font-size"
-			],
-			[
-				"fz",
-				"font-size"
-			],
-			[
-				"endfore",
-				"endforeach〔keyword〕"
-			],
-			[
-				"flex-",
-				"flex-6"
-			],
-			[
-				"the",
-				"the_field"
-			],
-			[
-				"asite",
-				"aside-width"
 			]
 		]
 	},
@@ -532,78 +532,25 @@
 			"file": "css/sass/partials/content.scss",
 			"settings":
 			{
-				"buffer_size": 2189,
+				"buffer_size": 2311,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/sass/partials/woocommerce.scss",
+			"file": "css/sass/partials/mediaqueries.scss",
 			"settings":
 			{
-				"buffer_size": 5805,
+				"buffer_size": 6271,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "woocommerce/myaccount/my-account.php",
+			"file": "css/sass/partials/layout.scss",
 			"settings":
 			{
-				"buffer_size": 974,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 22071,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/sass/partials/pages.scss",
-			"settings":
-			{
-				"buffer_size": 7012,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/sass/partials/header.scss",
-			"settings":
-			{
-				"buffer_size": 3817,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/sass/modules/fonts.scss",
-			"settings":
-			{
-				"buffer_size": 1203,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/sass/modules/mixins.scss",
-			"settings":
-			{
-				"buffer_size": 6621,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/sass/partials/slick.scss",
-			"settings":
-			{
-				"buffer_size": 3687,
+				"buffer_size": 1131,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -612,7 +559,61 @@
 			"file": "js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 3050,
+				"buffer_size": 4361,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/partials/pages.scss",
+			"settings":
+			{
+				"buffer_size": 7081,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/partials/woocommerce.scss",
+			"settings":
+			{
+				"buffer_size": 6978,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front-page.php",
+			"settings":
+			{
+				"buffer_size": 4192,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/woocommerce.php",
+			"settings":
+			{
+				"buffer_size": 2767,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 3583,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/sass/partials/header.scss",
+			"settings":
+			{
+				"buffer_size": 5050,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -715,29 +716,38 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/modules",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce"
 	],
 	"file_history":
 	[
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1513773714/mapped/var/www/html/nuagegraphik-com/wp-content/themes/graphikloud/header.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1513774156/mapped/var/www/html/nuagegraphik-com/wp-content/themes/graphikloud/function-ajax.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1513773468/mapped/var/www/html/nuagegraphik-com/wp-content/themes/graphikloud/style.css",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1513773626/mapped/var/www/html/nuagegraphik-com/wp-content/themes/graphikloud/functions.php",
+		"/Users/nuagegraphik/Desktop/products.csv",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Downloads/baseareticle2.csv",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/front-page.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/woocommerce.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/header.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/modules/mixins.scss",
-		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508522155/mapped/var/www/html/client/margaux/wp-config.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/pages.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/slick.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/modules/woocommerce.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/archive-product.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/style.css.map",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/style.css",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1512400659/mapped/var/www/html/client/margaux/wp-content/plugins/woo-cart-count-shortcode/woocommerce-cart-count-shortcode.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1512400362/mapped/var/www/html/client/margaux/wp-content/plugins/woo-cart-count-shortcode/woocommerce-cart-count-shortcode.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/pages.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/myaccount/my-account.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/modules/fonts.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/footer.scss",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1508522155/mapped/var/www/html/client/margaux/wp-config.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/archive-product.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/wordpress.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/loop.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/header.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/woocommerce.scss",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1507905535/mapped/var/www/html/client/margaux/wp-content/plugins/prdctfltr/lib/pf-frontend.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/margaux/woocommerce/woocommerce.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/content-single-product.php",
@@ -752,18 +762,14 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/utils.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/margaux/woocommerce/assets/css/woocommerce.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/header.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/js/scripts.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/page-54.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/page-52.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/footer.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/.sass-cache/cf9e920644906025889c7647d8a9bfd95e776c7f/layout.scssc",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1507650567/mapped/var/www/html/client/margaux/wp-content/plugins/simple-share-buttons-adder/inc/ssba_buttons.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/page.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/auth/footer.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/storefront-master/header.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/global/breadcrumb.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/modules/fonts.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/single-product/meta.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/margaux/woocommerce/includes/wc-template-functions.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/margaux/woocommerce/includes/wc-template-hooks.php",
@@ -771,7 +777,6 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/single-product/share.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/single-product/tabs/description.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/woocommerce/content-product.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/front-page.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/partials/reset.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/modules/woocommerce-functions.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/margaux/css/sass/style.scss",
@@ -841,27 +846,18 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/nav.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/css/sass/partials/wrapper.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/sftp-config.json",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/package.json",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/style.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/projet.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/pagination.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/index.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/category.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/css/shame.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Sites/eddhostel/package.json"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
 		"height": 173.0,
 		"where_history":
 		[
+			"<open folders>",
 			"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/margaux/woocommerce",
 			"<open folders>",
 			"<open files>",
@@ -873,6 +869,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"important",
+			"Fixie",
+			"8436565290236",
+			"curre",
+			"searc",
+			"search",
+			"onsale",
+			"f",
 			"prdct",
 			"prdc",
 			"h1",
@@ -942,7 +946,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -958,8 +962,8 @@
 						"selection":
 						[
 							[
-								477,
-								465
+								385,
+								376
 							]
 						],
 						"settings":
@@ -970,10 +974,10 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 659.0,
+						"translation.y": 474.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -982,15 +986,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2189,
+						"buffer_size": 2311,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								195,
-								195
+								372,
+								372
 							]
 						],
 						"settings":
@@ -1002,189 +1006,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 172.0,
+						"translation.y": 645.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "css/sass/partials/woocommerce.scss",
+					"file": "css/sass/partials/mediaqueries.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5805,
+						"buffer_size": 6271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5080,
-								5080
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1610.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "woocommerce/myaccount/my-account.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 974,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								791,
-								791
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 388.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "functions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 22071,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6097,
-								6097
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5345.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "css/sass/partials/pages.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7012,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6175,
-								6175
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 13665.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "css/sass/partials/header.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								932,
-								932
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "css/sass/modules/fonts.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1203,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								638,
-								638
+								3396,
+								3418
 							]
 						],
 						"settings":
@@ -1195,60 +1037,27 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 83.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "css/sass/modules/mixins.scss",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 6621,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2543.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "css/sass/partials/slick.scss",
+					"buffer": 3,
+					"file": "css/sass/partials/layout.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3687,
+						"buffer_size": 1131,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								912,
-								912
+								743,
+								743
 							]
 						],
 						"settings":
@@ -1257,31 +1066,30 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 912.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 4,
 					"file": "js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3050,
+						"buffer_size": 4361,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1470,
-								595
+								905,
+								905
 							]
 						],
 						"settings":
@@ -1294,7 +1102,201 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 582.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/sass/partials/pages.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2506,
+								2506
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "css/sass/partials/woocommerce.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6301,
+								6301
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11523.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "front-page.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2342,
+								2342
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2044.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "modules/woocommerce.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2558,
+								2614
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3012,
+								3012
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "css/sass/partials/header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3905,
+								3912
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7011.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 10,
@@ -1305,7 +1307,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 40.0
+		"height": 37.0
 	},
 	"input":
 	{
@@ -1350,7 +1352,7 @@
 	"project": "margaux.sublime-project",
 	"replace":
 	{
-		"height": 76.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1361,10 +1363,26 @@
 		[
 			[
 				"header",
-				"margaux/css/sass/partials/header.scss"
+				"margaux/header.php"
+			],
+			[
+				"fu",
+				"margaux/functions.php"
+			],
+			[
+				"front",
+				"margaux/front-page.php"
+			],
+			[
+				"mixi",
+				"margaux/css/sass/modules/mixins.scss"
 			],
 			[
 				"func",
+				"margaux/functions.php"
+			],
+			[
+				"funct",
 				"margaux/functions.php"
 			],
 			[
@@ -1466,14 +1484,6 @@
 			[
 				"lay",
 				"margaux/css/sass/partials/layout.scss"
-			],
-			[
-				"front",
-				"margaux/front-page.php"
-			],
-			[
-				"mixi",
-				"margaux/css/sass/modules/mixins.scss"
 			],
 			[
 				"fun",
@@ -1820,10 +1830,6 @@
 				"oniris/js/main.js"
 			],
 			[
-				"funct",
-				"oniris/functions.php"
-			],
-			[
 				"mixin",
 				"oniris/scss/_mixins.scss"
 			],
@@ -1866,10 +1872,6 @@
 			[
 				"funti",
 				"oniris/functions.php"
-			],
-			[
-				"vai",
-				"oniris/scss/_variables.scss"
 			]
 		],
 		"width": 0.0

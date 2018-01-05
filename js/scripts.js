@@ -27,6 +27,11 @@ function initMap(){
 			$('div.search-bar input').focus();
 			$('div.search-bar').toggleClass('active');
 		});
+
+		$(document).on( 'click', '.prdctfltr-shop .prdctfltr_filter_title', function(e){
+			$(this).toggleClass('active');
+			$('.prdctfltr_wc', '.prdctfltr-shop').toggleClass('active');
+		});
 		// 
 		// 
 		$('.thumbnail.gallery', '.single-post').slick({

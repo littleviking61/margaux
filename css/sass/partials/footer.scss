@@ -6,12 +6,12 @@
 .footer {
 	position: relative;
 	width: 100%;
-	height: $footerHeight;
+	//height: $footerHeight;
 	background-color: $black;
 	padding-top: $gutterLarge;
 	overflow: hidden;
 	color: $grey;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 
 	.container{
 		@include align-items(flex-start);
@@ -45,27 +45,29 @@
 	}
 
 	.horaire{
-		width: span(2);
+		width: span(3);
 	}
 
 	.social-menu{
-		width: span(2);
+		width: span(1);
 		@include flexbox();
+		@include flex-wrap(wrap);
 
 		a{
 			display: inline-block;
 			width: span(1);
 			text-transform: uppercase;
 			text-align: center;
-			margin-left: $gap;
+			margin-right: $gap;
 		}
 
-		li:first-child a{
-			margin-left: 0;
+		li:last-child a{
+			margin-right: 0;
 		}
 	}
 
 	.copyright{
-		display: none;
+		font-size: 0.9rem;
+    opacity: 0.30;
 	}
 }

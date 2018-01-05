@@ -43,6 +43,9 @@ main{
 .row{
 	@at-root section#{&}{
 		padding: 60px 0;
+		&:first-child{
+			padding: 20px 0;
+		}
 	}
 
 	@at-root ul#{&}{

@@ -2,6 +2,14 @@
 
 require_once "woocommerce-functions.php";
 
+function sv_remove_product_page_skus( $enabled ) {
+    if ( ! is_admin() && is_product() ) {
+        return false;
+    }
+
+    return $enabled;
+}
+add_filter( 'wc_product_sku_enabled', 'sv_remove_product_page_skus' );
 
 // define the woocommerce_shop_loop_item_title callback 
 function action_woocommerce_shop_loop_item_title( $woocommerce_template_loop_product_title, $int ) { ?>

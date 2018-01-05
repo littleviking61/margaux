@@ -37,11 +37,12 @@
 					margin-top: $gutter;
 
 					&:first-child{
-						height: 570px;
+						height: auto;
 						width: 570px;
 						display: block;
 						overflow: hidden;
 						position: relative;
+						max-width: 100%;
 					}
 				}
 			}
@@ -415,3 +416,23 @@
 // 		@include flex-wrap(wrap);
 // 	}
 // }
+// 
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
+	background-color: $featured;
+}
+
+/* shame */
+
+.prdctfltr-shop .prdctfltr_woocommerce.pf_default form.prdctfltr_woocommerce_ordering{
+	width: 100%;
+	margin: 0 !important;
+
+	.prdctfltr_filter_inner{
+		width: 100%!important;
+	}
+}
+
+.prdctfltr_wc.prdctfltr_wc_regular.prdctfltr_woocommerce.pf_default .prdctfltr_woocommerce_ordering div.prdctfltr_filter{
+	width: auto !important;
+	padding: 0 10px!important;
+}

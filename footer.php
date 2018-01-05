@@ -9,13 +9,20 @@
 								<img src="<?= get_template_directory_uri(); ?>/img/logo-footer.png" alt="Logo" class="logo-img">
 							</a>
 						</div>
-						
 					</div>
 					
 					<div class="vcard">
-						<p class="adr">
-							<?= get_field('adresse_pied_de_page', 'option'); ?>
-						</p>
+						<div>
+							<p class="adr">
+								<?= get_field('adresse_pied_de_page', 'option'); ?>
+							</p>
+							<!-- copyright -->
+							<p class="copyright">
+								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> -
+								<a href="//wordpress.org">WordPress</a> - <a href="//nuagegraphik.com">Nuagegraphik</a>
+							</p>
+							<!-- /copyright -->
+						</div>
 					</div>
 
 					<nav class="quick-menu">
@@ -32,14 +39,8 @@
 						<nav>
 							<?php html5blank_nav('social-menu'); ?>
 						</nav>
-
-						<!-- copyright -->
-						<p class="copyright">
-							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> -
-							<a href="//wordpress.org">WordPress</a> - <a href="//nuagegraphik.com">Nuagegraphik</a>
-						</p>
-						<!-- /copyright -->
 					</div>
+
 				</div>
 				
 			</footer>
