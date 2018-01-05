@@ -34,32 +34,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<?php foreach ( $attributes as $attribute ) : ?>
-		<dt><?php echo wc_attribute_label( $attribute->get_name() ); ?> :&nbsp;</dt>
-		<dd><?php
-			$values = array();
+		<?php if ($attribute->get_name() !== 'pa_id' && $attribute->get_name() !== 'reference_int'): ?>
+			<dt><?php echo wc_attribute_label( $attribute->get_name() ); ?> :&nbsp;</dt>
+			<dd><?php
+				$values = array();
 
-			if ( $attribute->is_taxonomy() ) {
-				$attribute_taxonomy = $attribute->get_taxonomy_object();
-				$attribute_values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'all' ) );
+				if ( $attribute->is_taxonomy() ) {
+					$attribute_taxonomy = $attribute->get_taxonomy_object();
+					$attribute_values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'all' ) );
 
-				foreach ( $attribute_values as $attribute_value ) {
-					$value_name = esc_html( $attribute_value->name );
+					foreach ( $attribute_values as $attribute_value ) {
+						$value_name = esc_html( $attribute_value->name );
 
-					if ( $attribute_taxonomy->attribute_public ) {
-						$values[] = '<a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a>';
-					} else {
-						$values[] = $value_name;
+						if ( $attribute_taxonomy->attribute_public ) {
+							$values[] = '<a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a>';
+						} else {
+							$values[] = $value_name;
+						}
+					}
+				} else {
+					$values = $attribute->get_options();
+
+					foreach ( $values as &$value ) {
+						$value = make_clickable( esc_html( $value ) );
 					}
 				}
-			} else {
-				$values = $attribute->get_options();
 
-				foreach ( $values as &$value ) {
-					$value = make_clickable( esc_html( $value ) );
-				}
-			}
-
-			echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-		?></dd>
+				echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+			?></dd>
+		<?php endif ?>
 	<?php endforeach; ?>
 </dl>

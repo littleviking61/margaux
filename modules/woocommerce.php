@@ -75,3 +75,9 @@ function your_custom_menu_item ( $items, $args ) {
     }
     return $items;
 }
+
+/** woocommerce: change position of add-to-cart on single product **/
+remove_action( 'woocommerce_single_product_summary', 
+           'woocommerce_template_single_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_summary', 
+        'woocommerce_template_single_add_to_cart', 45 );
