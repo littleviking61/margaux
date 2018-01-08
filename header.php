@@ -99,6 +99,10 @@
 					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>
+						<div class="show-on-mobile">
+							<?php html5blank_nav('top-menu'); ?>
+							<?php html5blank_nav('social-menu'); ?>
+						</div>
 					</nav>
 					<!-- /nav -->
 
