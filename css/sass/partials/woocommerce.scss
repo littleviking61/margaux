@@ -397,6 +397,7 @@
 			@include flexbox();
 			@include align-items(center);
 			@include justify-content(center);
+			@include flex-wrap(wrap);
 
 			li:not(:last-child):after{
 				content: "-";
