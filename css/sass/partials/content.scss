@@ -16,7 +16,7 @@ h1{
 	font-weight: bold;
 	text-align: center;
 	font-family: $font-family-title;
-	color: $featured;
+	color: $hover;
 }
 
 h2{
@@ -150,6 +150,10 @@ a:hover > span.button{
 		display: inline-block;
 	}
 
+	a:hover i{
+		background-color: $hover;
+	}
+
 	i[class*="icon-"]{
 		display: inline-block;
 		@include border-radius(40px);
@@ -170,6 +174,6 @@ a:hover > span.button{
 	font-size: 3.8rem;
 	// margin-top: $gap;
 	&, a{
-		color: $featured;
+		color: $hover;
 	}
 }

@@ -13,9 +13,7 @@
 					
 					<div class="vcard">
 						<div>
-							<p class="adr">
-								<?= get_field('adresse_pied_de_page', 'option'); ?>
-							</p>
+							<?= get_field('adresse_pied_de_page', 'option'); ?>
 							<!-- copyright -->
 							<p class="copyright">
 								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> -

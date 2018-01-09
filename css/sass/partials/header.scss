@@ -61,17 +61,17 @@
     	width: 100%;
     	top: $headerHeight;
     	left: 0;
-    	background-color: $darkGrey;
+    	background-color: white;//$darkGrey;
 			overflow: hidden;
 			max-height: 0px;
   		padding-left: $gap;
   		padding-right: $gap;
 			
 			a{
-				color: white;
+				//color: white;
 
 				&:hover{
-					border-color: white;
+					//border-color: white;
 				}
 			}
 

@@ -262,6 +262,27 @@ section.immanquables{
 	}
 }
 
+/* nos marques */
+
+.brands{
+	@include flexbox();
+	@include reset-box-ul();
+	@include flex-wrap(wrap);
+	@include align-items(center);
+	@include justify-content(center);
+
+
+	.brand{
+		min-width: 150px;
+    text-align: center;
+    margin: $gutterMedium;
+
+    a:hover{
+    	color: $hover;
+    }
+	}
+}
+
 /* actus */
 section.articles{
 	@include flexbox();
@@ -272,6 +293,14 @@ section.articles{
 
 	article{
 		margin-bottom: $gap;
+
+		.date + h2{
+			margin-top: 0;
+		}
+
+		.button{
+			margin-top: auto;
+		}
 
 		&:nth-child(4n+1){
 			margin-right: 0;
@@ -485,5 +514,11 @@ section.articles{
 	}
 	.pf_rngstyle_flat .irs-from:after, .pf_rngstyle_flat .irs-single:after, .pf_rngstyle_flat .irs-to:after{
 		border-top-color: $featured;
+	}
+}
+
+#post-404{
+	h2{
+		text-align: center;
 	}
 }
