@@ -16,7 +16,8 @@ function action_woocommerce_shop_loop_item_title( $woocommerce_template_loop_pro
 	<h3 class="main-cat"><?= get_product_main_category() ?></h3>
 	<?php
 };          
-// add the action 
+// add the action
+remove_action('woocommerce_shop_loop_item_title', 10); 
 add_action( 'woocommerce_shop_loop_item_title', 'action_woocommerce_shop_loop_item_title', 0 ); 
 
 /* change breadcrumb delimiter */
@@ -81,3 +82,19 @@ remove_action( 'woocommerce_single_product_summary',
            'woocommerce_template_single_add_to_cart', 30 );
 add_action( 'woocommerce_single_product_summary', 
         'woocommerce_template_single_add_to_cart', 45 );
+
+// Automatically shortens WooCommerce product titles on the main shop, category, and tag pages
+// to a set number of characters 
+function check_alternatif_title( $title, $id ) {
+  if ( get_post_type( $id ) === 'product' ) {
+  	$alternatif_title = get_field('titre_alternatif',$id);
+  	if(!empty($alternatif_title)) {
+  		return $alternatif_title;
+  	}else{
+	    return $title;
+  	}
+  } else {
+    return $title;
+  }
+}
+add_filter( 'the_title', 'check_alternatif_title', 10, 2 );

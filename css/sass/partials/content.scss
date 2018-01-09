@@ -16,7 +16,7 @@ h1{
 	font-weight: bold;
 	text-align: center;
 	font-family: $font-family-title;
-	color: $hover;
+	color: $featured;
 }
 
 h2{
@@ -172,8 +172,9 @@ a:hover > span.button{
 	@extend %container;
 	text-align: center;
 	font-size: 3.8rem;
+	margin-bottom: $gutter;
 	// margin-top: $gap;
 	&, a{
-		color: $hover;
+		color: $featured;
 	}
 }

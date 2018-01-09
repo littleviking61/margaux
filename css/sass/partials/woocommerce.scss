@@ -350,9 +350,10 @@
 	.woocommerce{
 		@include flexbox();
 
+
 		.woocommerce-MyAccount-content{
 			@include flex(1);
-			padding: $gap;
+			padding: $gap $gutter;
 			border-top: thin solid $grey;
 
 			a{
@@ -393,6 +394,63 @@
 			}
 		}
 
+		table.shop_table{
+			border-radius: 0;
+			border: none;
+
+			thead{
+				text-transform: uppercase;
+				color: $featured;
+			}
+
+			a{
+				text-decoration: none;
+				color: darken($hover, 10%);
+				background-color: transparent;
+			}
+		}
+
+		.addresses .title{
+			h3{
+				margin-bottom: 0;
+				& + .edit{
+					float: left;
+					clear: both;
+					margin-bottom: $gutter;
+				}
+			}
+		}
+
+		form{
+			input[type="text"], input.input-text {
+				padding: 4px 8px;
+			}
+
+			.required{
+				text-decoration: none;
+			}
+
+			fieldset{
+				border: none;
+				padding: 0;
+				margin-top: $gap;
+
+				& > legend{
+					text-transform: uppercase;
+					color: $featured;
+				}
+			}
+
+			input.button{
+				border-radius: 50px;
+				background-color: $featured;
+				color:white;
+				&:hover{
+					background-color: $hover;
+				}
+			}
+		}
+
 	}
 
 	main{
@@ -408,6 +466,25 @@
 	}
 	
 	.ssba-wrap{
+		display: none;
+	}
+}
+
+.woocommerce-customer-logout{
+	.woocommerce-message{
+		border-top: thin $grey solid;
+		background-color: transparent;
+		@include order(2);
+		@include flex(1);
+		padding: $gap 0 0;
+		&:before{
+			display: none;
+		}
+		a{
+			color: $hover;
+		}
+	}
+	.woocommerce-MyAccount-content{
 		display: none;
 	}
 }
