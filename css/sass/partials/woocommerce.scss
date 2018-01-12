@@ -350,7 +350,6 @@
 	.woocommerce{
 		@include flexbox();
 
-
 		.woocommerce-MyAccount-content{
 			@include flex(1);
 			padding: $gap $gutter;
@@ -467,6 +466,70 @@
 	
 	.ssba-wrap{
 		display: none;
+	}
+}
+
+// page de login
+.page-id-7{
+	.woocommerce{
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+
+		> h2{
+			display: none;
+		}
+
+		.woocommerce-error{
+			border-top: none;
+			background-color: transparent;
+			margin-bottom: 0;
+			width: 100%;
+			text-align: center;
+
+			&:before{
+				position: unset;
+				display: inline-block;
+				left: unset;	
+				margin-right: 5px;
+			}
+
+			li{
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+		.woocommerce-form-login{
+			padding: $gap;
+
+			p:nth-child(3){
+				text-align: center;
+				padding-top: $gutterLarge;
+
+				label{
+					margin-top: $gutter;
+					width: 100%;
+					display: block;
+				}
+			}
+
+			.lost_password{
+				margin-top: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.woocommerce-lost-password{
+	.woocommerce{
+		padding: 0 $gap;
+		text-align: center;
+
+		form .form-row-first{
+			float: none;
+			margin: 0 auto $gutterLarge;
+		}
 	}
 }
 

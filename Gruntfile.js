@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
             sass: {
                 files: ['css/sass/**/*.{scss,sass}'],
-                tasks: ['sass:dist', 'rsync'],
+                tasks: ['sass:dist'/*, 'rsync'*/],
             },
 
             // js : {
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                 options: {
                     src: ["./css/"],
                     //src: "./css",
-                    dest: "/var/www/html/client/margaux/wp-content/themes/margauxstore/css/",
+                    dest: "/www/wp-content/themes/margauxstore/css/",
                     host: "laventurier@onlinet",
                 }
             }
