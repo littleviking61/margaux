@@ -18,7 +18,7 @@
 		height: 100%;
 		width: 100%;
 		
-		.products{
+		ul.products{
 			height: 100%;
 			width: 100%;
 
@@ -187,31 +187,74 @@ section.immanquables{
 .related-products{
 	padding-top: $gap;
 
-	> .products{
-		@extend %container;
+	ul.products{
+		@include flexbox();
+		@include justify-content(center);
+		padding-bottom: $gap;
+		margin-bottom: 0;
 
-		> h2{
-			font-family: $font-family-base;
-			font-weight: normal;
-			font-size: 2.1rem;
-			text-transform: uppercase;
-			color: $featured;
-			text-align: center;
-			padding-bottom: $gutterLarge;
+		li.product{
+			height: auto;
+			margin: 0 $gutterLarge;
+			width: 253px;
+			clear: none !important;
+			padding: $gap/2;
+			background-color: white;
 		}
+	}
 
-		ul.products{
-			margin-bottom: 0;
-			li.product{
-				background-color: white;
-				padding: $gutter;
+	.slider{
+		@extend %container;
+		height: 440px;
+		
+		.woocommerce{
+			height: 100%;
+			width: 100%;
+			
+			ul.products{
+				height: 100%;
+				width: 100%;
 
-				.main-cat{
-					display: none;
+				li.product{
+					height: auto;
+					margin: 0 $gutterLarge;
+					clear: none !important;
+					padding: 0 $gap/2;
 				}
+			}
+
+			.slick-list{
+				padding-left: 20px;
 			}
 		}
 	}
+	
+
+	// > .products{
+	// 	@extend %container;
+
+	// 	> h2{
+	// 		font-family: $font-family-base;
+	// 		font-weight: normal;
+	// 		font-size: 2.1rem;
+	// 		text-transform: uppercase;
+	// 		color: $featured;
+	// 		text-align: center;
+	// 		padding-bottom: $gutterLarge;
+	// 	}
+
+	// 	ul.products{
+	// 		margin-bottom: 0;
+	// 		li.product{
+	// 			background-color: white;
+	// 			padding: $gutter;
+
+	// 			.main-cat{
+	// 				display: none;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 /* page 52 -54 contact a propo */

@@ -100,7 +100,7 @@ function initMap(){
 			nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
 		})
 
-		$('.products', 'section.nouveautes').slick({
+		$('ul.products', 'section.nouveautes').slick({
 		  infinite: true,
 		   slidesToShow: 4,
 		   slidesToScroll: 4,
@@ -108,6 +108,31 @@ function initMap(){
 		   nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
 		   slidesToShow: 4,
 		   slidesToScroll: 4,
+			 responsive: [
+		    {
+		      breakpoint: 950,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3,
+		      }
+		    },
+		    {
+		      breakpoint: 675,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    },
+		   ]
+		});
+
+		$('ul.products', 'section.related-products .slider').slick({
+			 infinite: true,
+		   prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
+		   nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
+		   slidesToShow: 4,
+		   slidesToScroll: 4,
+		   variableWidth: true,
 			 responsive: [
 		    {
 		      breakpoint: 950,

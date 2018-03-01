@@ -22,26 +22,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products">
+	<h3><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ); ?></h3>
+	<div class="slider">
+			<div class="woocommerce columns-4 ">
 
-		<h2><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ); ?></h2>
-
-		<?php woocommerce_product_loop_start(); ?>
-
+			<?php woocommerce_product_loop_start(); ?>
 			<?php foreach ( $related_products as $related_product ) : ?>
 
 				<?php
-				 	$post_object = get_post( $related_product->get_id() );
+				$post_object = get_post( $related_product->get_id() );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object );
+				setup_postdata( $GLOBALS['post'] =& $post_object );
 
-					wc_get_template_part( 'content', 'product' ); ?>
+				wc_get_template_part( 'content', 'product' ); ?>
 
 			<?php endforeach; ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
-	</section>
+			<?php woocommerce_product_loop_end(); ?>
+	
+			</div>
+	</div>
 
 <?php endif;
 

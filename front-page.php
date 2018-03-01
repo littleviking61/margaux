@@ -58,7 +58,11 @@
 			<section class="nouveautes">
 				<h3><?= __('Nouveautés', 'html5blank') ?></h3>
 				<div class="slider">
-					<?= do_shortcode( '[recent_products per_page="12"]' ) ?>
+					<?php if( get_field('nouveautes') ): ?>
+						<?= do_shortcode( '[products ids="'.implode(',', get_field('produits_nouveautes')).'"]' ) ?>
+					<?php else: ?>
+						<?= do_shortcode( '[recent_products per_page="12"]' ) ?>
+					<?php endif; ?>
 				</div>
 			</section>
 

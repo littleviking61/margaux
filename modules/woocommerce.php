@@ -98,3 +98,14 @@ function check_alternatif_title( $title, $id ) {
   }
 }
 add_filter( 'the_title', 'check_alternatif_title', 10, 2 );
+
+// Change number related products
+ 
+add_filter( 'woocommerce_output_related_products_args', 'bbloomer_change_number_related_products' );
+ 
+function bbloomer_change_number_related_products( $args ) {
+ 
+ $args['posts_per_page'] = 16; // # of related products
+ $args['columns'] = 4; // # of columns per row
+ return $args;
+}

@@ -6,11 +6,10 @@
 			<a href="<?= get_permalink(25) ?>"><?= __('Actus', 'html5blank') ?></a>
 		</h2>
 
-		<!-- section -->
-		<section class="container">
-
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
+			<!-- section -->
+			<section class="container">
 				<!-- article -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					
@@ -45,11 +44,27 @@
 
 				</article>
 				<!-- /article -->
+			</section>
+			<!-- /section -->
+
+			<?php if( get_field('afficher_produits_lies') && get_field('produits') ): ?>
+				<section class="full related-products">
+					<h3><?= get_field('titre') ?></h3>
+					<?php if (count(get_field('produits')) > 1): ?>
+							<div class="slider">
+								<?= do_shortcode( '[products ids="'.implode(',', get_field('produits')).'"]' ) ?>
+						</div>
+					<?php else: ?>
+						<?= do_shortcode( '[products ids="'.implode(',', get_field('produits')).'"]' ) ?>
+					<?php endif ?>				
+				</section>
+			<?php endif; ?>
 
 			<?php endwhile; ?>
 
 			<?php else: ?>
-
+			<!-- section -->
+			<section class="container">
 				<!-- article -->
 				<article>
 
@@ -57,11 +72,11 @@
 
 				</article>
 				<!-- /article -->
+			</section>
+			<!-- /section -->
 
 			<?php endif; ?>
 
-		</section>
-		<!-- /section -->
 	</main>
 
 <?php get_footer(); ?>

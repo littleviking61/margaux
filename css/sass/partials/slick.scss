@@ -162,7 +162,7 @@
         right: 0;
     }
 
-    &.slick-hidden {
+    &.slick-hidden, &.slick-disabled{
         display: none;
     }
 }
