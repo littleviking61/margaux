@@ -188,8 +188,8 @@ section.immanquables{
 	padding-top: $gap;
 
 	ul.products{
-		@include flexbox();
-		@include justify-content(center);
+		//@include flexbox();
+		//@include justify-content(center);
 		padding-bottom: $gap;
 		margin-bottom: 0;
 
@@ -205,7 +205,7 @@ section.immanquables{
 
 	.slider{
 		@extend %container;
-		height: 440px;
+		min-height: 440px;
 		
 		.woocommerce{
 			height: 100%;
@@ -220,11 +220,18 @@ section.immanquables{
 					margin: 0 $gutterLarge;
 					clear: none !important;
 					padding: 0 $gap/2;
+
+					a{
+						@include flexbox();
+						@include flex-direction(column);
+						width: 100%;
+					}
 				}
 			}
 
 			.slick-list{
-				padding-left: 20px;
+				padding-left: $gutter;
+				margin: 0 auto;
 			}
 		}
 	}

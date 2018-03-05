@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) : ?>
 
 	<h3><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ); ?></h3>
-	<div class="slider">
-			<div class="woocommerce columns-4 ">
+	<div class="slider" data-slide="<?= count($related_products) > 4 ? 4 : count($related_products) ?>">
+			<div class="woocommerce columns-4">
 
 			<?php woocommerce_product_loop_start(); ?>
 			<?php foreach ( $related_products as $related_product ) : ?>

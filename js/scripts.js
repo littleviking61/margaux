@@ -102,8 +102,6 @@ function initMap(){
 
 		$('ul.products', 'section.nouveautes').slick({
 		  infinite: true,
-		   slidesToShow: 4,
-		   slidesToScroll: 4,
 		   prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
 		   nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
 		   slidesToShow: 4,
@@ -125,30 +123,31 @@ function initMap(){
 		    },
 		   ]
 		});
-
-		$('ul.products', 'section.related-products .slider').slick({
-			 infinite: true,
-		   prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
-		   nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
-		   slidesToShow: 4,
-		   slidesToScroll: 4,
-		   variableWidth: true,
-			 responsive: [
-		    {
-		      breakpoint: 950,
-		      settings: {
-		        slidesToShow: 3,
-		        slidesToScroll: 3,
-		      }
-		    },
-		    {
-		      breakpoint: 675,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    },
-		   ]
+		$('section.related-products .slider').each(function() {
+			var nbSlide = 4-$(this).attr("data-slide") < 1 ? 1 : 4-$(this).attr("data-slide");
+			$('ul.products', this).slick({
+				 infinite: true,
+			   prevArrow: '<button class="prev"><span><i class="maricon-arrow"></i></span></button>',
+			   nextArrow: '<button class="next"><span><i class="maricon-arrow"></i></span></i></button>',
+			   slidesToShow: 4-nbSlide,
+			   slidesToScroll: 4-nbSlide,
+				 responsive: [
+			    {
+			      breakpoint: 950,
+			      settings: {
+			        slidesToShow: 3-nbSlide,
+			        slidesToScroll: 3-nbSlide,
+			      }
+			    },
+			    {
+			      breakpoint: 675,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    },
+			   ]
+			});
 		});
 
 		// google map

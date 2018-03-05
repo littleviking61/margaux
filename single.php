@@ -51,7 +51,7 @@
 				<section class="full related-products">
 					<h3><?= get_field('titre') ?></h3>
 					<?php if (count(get_field('produits')) > 1): ?>
-							<div class="slider">
+							<div class="slider" data-slide="<?= count(get_field('produits')) > 4 ? 4 : count(get_field('produits')) ?>">
 								<?= do_shortcode( '[products ids="'.implode(',', get_field('produits')).'"]' ) ?>
 						</div>
 					<?php else: ?>
