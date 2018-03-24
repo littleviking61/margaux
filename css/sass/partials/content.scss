@@ -113,9 +113,14 @@ a:hover > span.button{
 			display: inline-block;
 		}
 
-		img{
-			@include object-fit(cover);
+		.thumbnail{
+			height: 100%;
+			background-color:white;
+			img{
+				@include object-fit(contain);
+			}
 		}
+
 
 		.content{
 			padding: $gutter;

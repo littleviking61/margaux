@@ -10,44 +10,49 @@
 					<ul class="slides">
 
 						<?php while( have_rows('slides') ): the_row(); ?>
+
 							<li class="slide">
-								<?php $image = get_sub_field('image'); ?>
+								<?php 
+									$image = get_sub_field('image');
+									$texte = get_sub_field('texte'); 
+									$linkID = get_sub_field('lien'); 
+								?>
+
 								<div class="thumbnail">
-									<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( $image, 'large' )); ?>">
+									<?php if (!empty($image)): ?>		
+										<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( $image, 'large' )); ?>">
+									<?php else: ?>
+										<img class="avatar" src="<?= esc_url(get_the_post_thumbnail_url( $linkID, 'large' )); ?>">
+									<?php endif; ?>
 								</div>
 
 								<div class="content">
-									<h3 class="main-cat">Actus</h3>
-
-									<?php $texte = get_sub_field('texte'); ?>
-									<?php if (!empty($texte)): ?>
-										<p><?= get_sub_field('texte') ?></p>
+									<?php $texte = get_sub_field('texte'); $linkID = get_sub_field('lien'); ?>
+									<?php if ( get_post_type($linkID) == 'post'): ?>
+										<h3 class="main-cat">Actus</h3>
+										<?php if (!empty($texte)): ?>
+											<p><?= get_sub_field('texte') ?></p>
+										<?php else: ?>
+											<p><?= get_the_excerpt($linkID) ?></p>	
+										<?php endif ?>
+										
+										<a class="button" href="<?= get_permalink( $linkID )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
 									<?php else: ?>
-										<p><?= get_the_excerpt(get_sub_field('lien')) ?></p>	
+										<?php $product = wc_get_product( $linkID ); ?>
+										<h3 class="main-cat">Produit</h3>
+										<?php if (!empty($texte)): ?>
+											<p><?= get_sub_field('texte') ?></p>
+										<?php elseif (!empty($product->get_short_description())): ?>
+											<p><?= $product->get_short_description(); ?></p>	
+										<?php else: ?>
+											<p><?= $product->get_description(); ?></p>	
+										<?php endif ?>
+										
+										<a class="button" href="<?= get_permalink( $linkID )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
 									<?php endif ?>
-									
-									<a class="button" href="<?= get_permalink( get_sub_field('lien') )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
 								</div>
 							</li>
-								<li class="slide">
-								<?php $image = get_sub_field('image'); ?>
-								<div class="thumbnail">
-									<img class="avatar" src="<?= esc_url(wp_get_attachment_image_url( $image, 'large' )); ?>">
-								</div>
 
-								<div class="content">
-									<h3 class="main-cat">Actus</h3>
-
-									<?php $texte = get_sub_field('texte'); ?>
-									<?php if (!empty($texte)): ?>
-										<p><?= get_sub_field('texte') ?></p>
-									<?php else: ?>
-										<p><?= get_the_excerpt(get_sub_field('lien')) ?></p>	
-									<?php endif ?>
-									
-									<a class="button" href="<?= get_permalink( get_sub_field('lien') )?>"><?= __('Voir <i class="maricon-plus"></i>', 'html5blank') ?></a>
-								</div>
-							</li>
 						<?php endwhile; ?>
 
 					</ul>

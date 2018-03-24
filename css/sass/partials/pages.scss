@@ -315,6 +315,7 @@ section.immanquables{
 /* nos marques */
 
 .brands{
+	width: 100%;
 	@include flexbox();
 	@include reset-box-ul();
 	@include flex-wrap(wrap);
@@ -409,6 +410,9 @@ section.articles{
 
 				.thumbnail{
 					width: span(6);
+					img{
+						@include object-fit(contain);
+					}
 				}
 
 				.content{
@@ -450,6 +454,10 @@ section.articles{
 	.thumbnail{
 		width: 100%;
 		max-height: 570px;
+		img{
+			@include object-fit(contain);
+			max-height: 570px;
+		}
 	}
 
 	.content{
