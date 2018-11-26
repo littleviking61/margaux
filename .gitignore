@@ -1,8 +1,8 @@
 # Compiled CSS
-*.css
+#*.css
 
 # Minified js
-*.min.js
+#*.min.js
 
 # Sass
 .sass-cache
