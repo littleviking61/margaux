@@ -82,15 +82,18 @@
 				</section>
 
 				<section class="recent-posts">
-					<?php $actu = get_field('actu'); ?>
-					<a href="<?= get_permalink($actu) ?>">
+					<?php $actualite = get_field('actu')[0]; ?>
+					<a href="<?= get_permalink($actualite) ?>">
 						<h3><?= __('Actus', 'html5blank') ?></h3>
 						<div class="thumbnail">
-							<img src="<?= get_the_post_thumbnail_url($actu,'medium') ?>" alt="">
+							<img src="<?= get_the_post_thumbnail_url($actualite,'medium') ?>" alt="">
 						</div>
 						<div class="content">
-							<h2><?= get_the_title( $actu ) ?></h2>
-							<p><?= get_the_excerpt( $actu ) ?></p>
+							<h2><?= get_the_title( $actualite ) ?></h2>
+							<?php $post = get_post($actualite);
+								setup_postdata($post);
+								echo '<p>'.get_the_excerpt().'</p>';
+								wp_reset_postdata(); ?>
 							<span class="button big"><i class="maricon-plus"></i></span>
 						</div>
 					</a>

@@ -18,7 +18,7 @@
 		height: 100%;
 		width: 100%;
 		
-		ul.products{
+		.products{
 			height: 100%;
 			width: 100%;
 
@@ -187,81 +187,31 @@ section.immanquables{
 .related-products{
 	padding-top: $gap;
 
-	ul.products{
-		//@include flexbox();
-		//@include justify-content(center);
-		padding-bottom: $gap;
-		margin-bottom: 0;
-
-		li.product{
-			height: auto;
-			margin: 0 $gutterLarge;
-			width: 253px;
-			clear: none !important;
-			padding: $gap/2;
-			background-color: white;
-		}
-	}
-
-	.slider{
+	> .products{
 		@extend %container;
-		min-height: 440px;
-		
-		.woocommerce{
-			height: 100%;
-			width: 100%;
-			
-			ul.products{
-				height: 100%;
-				width: 100%;
 
-				li.product{
-					height: auto;
-					margin: 0 $gutterLarge;
-					clear: none !important;
-					padding: 0 $gap/2;
+		> h2{
+			font-family: $font-family-base;
+			font-weight: normal;
+			font-size: 2.1rem;
+			text-transform: uppercase;
+			color: $featured;
+			text-align: center;
+			padding-bottom: $gutterLarge;
+		}
 
-					a{
-						@include flexbox();
-						@include flex-direction(column);
-						width: 100%;
-					}
+		ul.products{
+			margin-bottom: 0;
+			li.product{
+				background-color: white;
+				padding: $gutter;
+
+				.main-cat{
+					display: none;
 				}
 			}
-
-			.slick-list{
-				padding-left: $gutter;
-				margin: 0 auto;
-			}
 		}
 	}
-	
-
-	// > .products{
-	// 	@extend %container;
-
-	// 	> h2{
-	// 		font-family: $font-family-base;
-	// 		font-weight: normal;
-	// 		font-size: 2.1rem;
-	// 		text-transform: uppercase;
-	// 		color: $featured;
-	// 		text-align: center;
-	// 		padding-bottom: $gutterLarge;
-	// 	}
-
-	// 	ul.products{
-	// 		margin-bottom: 0;
-	// 		li.product{
-	// 			background-color: white;
-	// 			padding: $gutter;
-
-	// 			.main-cat{
-	// 				display: none;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 /* page 52 -54 contact a propo */
@@ -315,7 +265,6 @@ section.immanquables{
 /* nos marques */
 
 .brands{
-	width: 100%;
 	@include flexbox();
 	@include reset-box-ul();
 	@include flex-wrap(wrap);
@@ -410,9 +359,6 @@ section.articles{
 
 				.thumbnail{
 					width: span(6);
-					img{
-						@include object-fit(contain);
-					}
 				}
 
 				.content{
@@ -454,10 +400,6 @@ section.articles{
 	.thumbnail{
 		width: 100%;
 		max-height: 570px;
-		img{
-			@include object-fit(contain);
-			max-height: 570px;
-		}
 	}
 
 	.content{

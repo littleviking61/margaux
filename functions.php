@@ -588,6 +588,9 @@ if( function_exists('acf_add_options_page') ) {
     
 }
 
-
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 /* woocommerce */
 add_theme_support('woocommerce');
