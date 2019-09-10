@@ -16,7 +16,7 @@ npm-debug.log
 config.codekit
 
 # Transifex
-.transifexrc
+.transifexr
 /languages/*.po
 /languages/*.mo
 
